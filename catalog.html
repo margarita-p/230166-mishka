@@ -11,19 +11,22 @@
 
 
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <span class="visually-hidden">Магазин «Мишка»<br></span>
       <img src="http://placehold.it/150x100" width="150" height="100" alt="Магазин «Мишка»">
     </a>
 
     <nav class="main-nav main-nav--open">
-      <span class="visually-hidden">Главное меню</span>
-      <span class="main-nav__toggle"></span>
+      <span class="main-nav__toggle"><span class="visually-hidden">Главное меню</span></span>
       <ul class="main-nav__open">
-        <li><a href="#">Каталог товаров</a></li>
-        <li><a href="#">Вязание на заказ</a></li>
-        <li class="main-nav__search"><a href="#">Поиск по сайту</a></li>
-        <li class="main-nav__cart"><a href="#">Корзина: пока пуста</a></li>
+        <li class="main-nav__item main-nav__item--active"><a>Каталог товаров</a></li>
+        <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+        <li class="main-nav__item">
+          <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
+            <input type="search" name="search-field" placeholder="Поиск по сайту">
+          </form>
+        </li>
+        <li class="main-nav__item main-nav__item--cart"><a href="order.html">Корзина: пока пуста</a></li>
       </ul>
     </nav>
 
@@ -33,53 +36,57 @@
   </header>
 
 
-  <main class="content content__wrapper content--flex">
+  <main>
+    <section class="content content__wrapper content--flex">
 
-    <article class="goods-card">
-      <a href="#">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Зайчик-попрыгайчик">
-        <h3>Зайчик-попрыгайчик</h3>
-      </a>
-      <p>Рост 30 см, вес 200 г</p>
-      <div class="goods-card__footer">
-        <span class="goods-card__price">1 200 руб.</span>
-        <span class="goods-card__cart"></span>
-      </div>
-    </article>
+      <article class="goods-card">
+        <a href="catalog-item.html">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Зайчик-попрыгайчик">
+          <h3>Зайчик-попрыгайчик</h3>
+        </a>
+        <p>Рост 30 см, вес 200 г</p>
+        <div class="goods-card__footer">
+          <span class="goods-card__price">1 200 руб.</span>
+          <span class="goods-card__cart"></span>
+        </div>
+      </article>
 
-    <article class="goods-card">
-      <a href="#">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Корзинка для белья">
-        <h3>Корзинка для белья</h3>
-      </a>
-      <p>Диаметр 15 см, высота 10 см</p>
-      <div class="goods-card__footer">
-        <span class="goods-card__price">690 руб.</span>
-        <span class="goods-card__cart"></span>
-      </div>
-    </article>
+      <article class="goods-card">
+        <a href="catalog-item.html">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Корзинка для белья">
+          <h3>Корзинка для белья</h3>
+        </a>
+        <p>Диаметр 15 см, высота 10 см</p>
+        <div class="goods-card__footer">
+          <span class="goods-card__price">690 руб.</span>
+          <span class="goods-card__cart"></span>
+        </div>
+      </article>
 
-    <article class="goods-card">
-      <a href="#">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Большая корзинка для игрушек">
-        <h3>Большая корзинка для игрушек</h3>
-      </a>
-      <p>Диаметр 30 см, высота 30 см</p>
-      <div class="goods-card__footer">
-        <span class="goods-card__price">1 500 руб.</span>
-        <span class="goods-card__cart"></span>
-      </div>
-    </article>
+      <article class="goods-card">
+        <a href="catalog-item.html">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Большая корзинка для игрушек">
+          <h3>Большая корзинка для игрушек</h3>
+        </a>
+        <p>Диаметр 30 см, высота 30 см</p>
+        <div class="goods-card__footer">
+          <span class="goods-card__price">1 500 руб.</span>
+          <span class="goods-card__cart"></span>
+        </div>
+      </article>
+    </section>
 
-    <article class="production-card">
-      <h3 class="production-card__title">Процесс производства</h3>
-      <div class="production-card__video">
-        <img src="http://placehold.it/150x100" width="150" height="100" alt="Процесс производства">
-        <span class="video-icon"></span>
-      </div>
-      <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="btn" href="#">Сделать заказ</a>
-    </article>
+    <section class="content content__wrapper">
+      <article class="production-card">
+        <h3 class="production-card__title">Процесс производства</h3>
+        <div class="production-card__video">
+          <img src="http://placehold.it/150x100" width="150" height="100" alt="Процесс производства">
+          <span class="video-icon"><span class="visually-hidden">Воспроизведение</span></span>
+        </div>
+        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="btn" href="order.html">Сделать заказ</a>
+      </article>
+    </section>
   </main>
 
 
@@ -100,18 +107,18 @@
   </footer>
 
 
-  <section class="modal-content">
+  <section class="modal-content size">
     <h2 class="modal-content__title">Добавить в корзину</h2>
     <p>Выберите размер:</p>
-    <form class="form-size" action="https://echo.htmlacademy.ru/">
-      <input type="radio" class="visually-hidden" id="form-size-s" name="form-size" value="s" checked>
-      <label for="form-size-s">s</label>
+    <form class="size__form" action="https://echo.htmlacademy.ru/">
+      <input type="radio" class="visually-hidden" id="size-s" name="size" value="s" checked>
+      <label for="size-s">s</label>
 
-      <input type="radio" class="visually-hidden" id="form-size-m" name="form-size" value="m">
-      <label for="form-size-m">m</label>
+      <input type="radio" class="visually-hidden" id="size-m" name="size" value="m">
+      <label for="size-m">m</label>
 
-      <input type="radio" class="visually-hidden" id="form-size-l" name="form-size" value="l">
-      <label for="form-size-l">l</label>
+      <input type="radio" class="visually-hidden" id="size-l" name="size" value="l">
+      <label for="size-l">l</label>
 
       <button class="btn btn--green-back" type="submit">Добавить</button>
     </form>
