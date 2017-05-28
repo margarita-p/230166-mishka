@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <header class="page-header">
+    <a class="page-header__logo">
+      <span class="visually-hidden">Магазин «Мишка»<br></span>
+      <img src="img" width="" height="" alt="Магазин «Мишка»">
+    </a>
+
+    <nav class="main-nav main-nav--open">
+      <span class="visually-hidden">Главное меню</span>
+      <span class="main-nav__toggle"></span>
+      <ul class="main-nav__open">
+        <li><a href="#">Каталог товаров</a></li>
+        <li><a href="#">Вязание на заказ</a></li>
+        <li class="main-nav__search"><a href="#">Поиск по сайту</a></li>
+        <li class="main-nav__cart"><a href="#">Корзина: пока пуста</a></li>
+      </ul>
+    </nav>
+
+    <section class="content content--header">
+      <h1>Каталог товаров</h1>
+    </section>
+  </header>
+
+
+  <main class="content content__wrapper">
+    <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+    <form class="form-order" action="https://echo.htmlacademy.ru/">
+      <fieldset class="form-order__kind">
+        <legend>Тип</legend>
+        <p><input type="radio" class="visually-hidden" id="form-kind-interier" name="form-kind" value="interier" checked>
+        <label for="form-kind-interier">Аксессуар для интерьера</label></p>
+
+        <p><input type="radio" class="visually-hidden" id="form-kind-toy" name="form-kind" value="toy">
+        <label for="form-kind-toy">Детская игрушка</label></p>
+      </fieldset>
+
+      <fieldset class="form-order__color">
+        <legend>Цвет</legend>
+        <p><input type="checkbox" class="visually-hidden" id="form-color-white" name="form-color-white" checked>
+        <label for="form-color-white">Белый</label></p>
+
+        <p><input type="checkbox" class="visually-hidden" id="form-color-gray" name="form-color-gray" checked>
+        <label for="form-color-gray">Серый</label></p>
+
+        <p><input type="checkbox" class="visually-hidden" id="form-color-tiffany" name="form-color-tiffany" checked>
+        <label for="form-color-tiffany">«Тиффани»</label></p>
+
+        <p><input type="checkbox" class="visually-hidden" id="form-color-black" name="form-color-black" checked>
+        <label for="form-color-black">Черный</label></p>
+
+        <p><input type="checkbox" class="visually-hidden" id="form-color-pink" name="form-color-pink" checked>
+        <label for="form-color-pink">Розовый</label></p>
+
+        <p><input type="checkbox" class="visually-hidden" id="form-color-orange" name="form-color-orange" checked>
+        <label for="form-color-orange">Оранжевый</label></p>
+      </fieldset>
+
+      <fieldset class="form-order__username">
+        <legend>ФИО</legend>
+        <p><label for="form-username1">Имя:</label>
+        <input type="text" id="form-username1" name="form-username1" placeholder="Введите ваше имя*"></p>
+
+        <p><label for="form-username2">Фамилия:</label>
+        <input type="text" id="form-username2" name="form-username2" placeholder="Укажите фамилию*"></p>
+
+        <p><label for="form-username3">Отчество:</label>
+        <input type="text" id="form-username3" name="form-username3" placeholder="Отчество, если желаете"></p>
+      </fieldset>
+
+      <fieldset class="form-order__phone">
+        <legend>Тел</legend>
+        <p><label class="visually-hidden" for="form-phone">Телефон</label>
+        <input type="phone" id="form-phone" name="form-phone" placeholder="+7 ХХХ ХХ ХХ*"></p>
+      </fieldset>
+
+      <fieldset class="form-order__email">
+        <legend>E-mail</legend>
+        <p><label class="visually-hidden" for="form-email">Ваш Email</label>
+        <input type="email" id="form-email" name="form-email" placeholder="Ваш Email*"></p>
+      </fieldset>
+
+      <fieldset class="form-order__massage">
+        <legend>Доп</legend>
+        <textarea name="form-massage" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+      </fieldset>
+
+      <p class="form-order__remark">*Поля обязательны для заполнения</p>
+
+      <button class="btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+
+    </form>
+  </main>
+
+
+  <footer class="page-footer">
+    <div class="content content__wrapper">
+      <p class="page-footer__social">
+        <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+        <a class="social-btn social-btn--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
+        <a class="social-btn social-btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a class="social-btn social-btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
+      </p>
+
+      <p class="page-footer__copyright">
+        <b>Разработано</b>
+        <a class="logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">Лендинг интенсива «Продвинутый HTML и CSS»</span></a>
+      </p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
