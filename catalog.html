@@ -12,20 +12,18 @@
 
   <header class="page-header">
     <a class="page-header__logo" href="index.html">
-      <span class="visually-hidden">Магазин «Мишка»<br></span>
+      <span class="visually-hidden">Магазин «Мишка»</span>
       <img src="http://placehold.it/150x100" width="150" height="100" alt="Магазин «Мишка»">
     </a>
 
     <nav class="main-nav main-nav--open">
-      <span class="main-nav__toggle"><span class="visually-hidden">Главное меню</span></span>
-      <ul class="main-nav__open">
+      <span class="visually-hidden">Главное меню</span>
+      <span class="main-nav__toggle"><span class="visually-hidden">Свернуть/развернуь</span></span>
+
+      <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active"><a>Каталог товаров</a></li>
         <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-        <li class="main-nav__item">
-          <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search-field" placeholder="Поиск по сайту">
-          </form>
-        </li>
+        <li class="main-nav__item main-nav__item--search"><a href="search.html">Поиск по сайту</a></li>
         <li class="main-nav__item main-nav__item--cart"><a href="order.html">Корзина: пока пуста</a></li>
       </ul>
     </nav>
@@ -36,8 +34,9 @@
   </header>
 
 
-  <main>
-    <section class="content content__wrapper content--flex">
+  <main class="content">
+    <section class="content__wrapper content__wrapper--flex">
+      <h2 class="visually-hidden">Каталог товаров</h2>
 
       <article class="goods-card">
         <a href="catalog-item.html">
@@ -76,7 +75,8 @@
       </article>
     </section>
 
-    <section class="content content__wrapper">
+    <section class="content__wrapper">
+      <h2 class="visually-hidden">Видео</h2>
       <article class="production-card">
         <h3 class="production-card__title">Процесс производства</h3>
         <div class="production-card__video">
@@ -90,8 +90,8 @@
   </main>
 
 
-  <footer class="page-footer">
-    <div class="content content__wrapper">
+  <footer class="page-footer content">
+    <div class="content__wrapper">
       <p class="page-footer__social">
         <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
         <a class="social-btn social-btn--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>

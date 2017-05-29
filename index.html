@@ -9,22 +9,21 @@
 
 <body>
 
+
   <header class="page-header">
     <a class="page-header__logo">
-      <span class="visually-hidden">Магазин «Мишка»<br></span>
+      <span class="visually-hidden">Магазин «Мишка»</span>
       <img src="http://placehold.it/150x100" width="150" height="100" alt="Магазин «Мишка»">
     </a>
 
     <nav class="main-nav main-nav--open">
-      <span class="main-nav__toggle"><span class="visually-hidden">Главное меню</span></span>
-      <ul class="main-nav__open">
+      <span class="visually-hidden">Главное меню</span>
+      <span class="main-nav__toggle"><span class="visually-hidden">Свернуть/развернуь</span></span>
+
+      <ul class="main-nav__list">
         <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
         <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-        <li class="main-nav__item">
-          <form class="main-nav__search" action="https://echo.htmlacademy.ru" method="get">
-            <input type="search" name="search-field" placeholder="Поиск по сайту">
-          </form>
-        </li>
+        <li class="main-nav__item main-nav__item--search"><a href="search.html">Поиск по сайту</a></li>
         <li class="main-nav__item main-nav__item--cart"><a href="order.html">Корзина: пока пуста</a></li>
       </ul>
     </nav>
@@ -33,7 +32,7 @@
       <div class="promo">
         <h1>Милые штуки ручной работы для дома</h1>
       </div>
-      <div class="content__wrapper content--flex">
+      <div class="content__wrapper content__wrapper--flex">
         <a class="content__column content__column--right-green" href="catalog.html">Предметы интерьера</a>
         <a class="content__column content__column--left-green" href="catalog.html">Детские игрушки</a>
       </div>
@@ -112,7 +111,7 @@
 
         <p class="contacts__email">
           <span class="contacts__col contacts__col--right">e-mail:</span>
-          <span class="contacts__col contacts__col--left"><a href="feedback.html">info@mimimishkashop.ru</a></span>
+          <span class="contacts__col contacts__col--left"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
         </p>
 
         <p class="contacts__address">
@@ -131,8 +130,8 @@
   </main>
 
 
-  <footer class="page-footer">
-    <div class="content content__wrapper">
+  <footer class="page-footer content">
+    <div class="content__wrapper">
       <p class="page-footer__social">
         <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
         <a class="social-btn social-btn--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
