@@ -12,13 +12,13 @@
 
   <header class="page-header">
     <a class="page-header__logo">
-      <span class="page-header__hidden">Магазин «Мишка»</span>
+      <span class="visually-hidden">Магазин «Мишка»</span>
       <img src="http://placehold.it/150x100" width="150" height="100" alt="Магазин «Мишка»">
     </a>
 
     <nav class="main-nav main-nav--open">
-      <span class="page-header__hidden">Главное меню</span>
-      <span class="main-nav__toggle"><span class="page-header__hidden">Свернуть/развернуь</span></span>
+      <span class="visually-hidden">Главное меню</span>
+      <span class="main-nav__toggle"><span class="visually-hidden">Свернуть/развернуь</span></span>
 
       <ul class="main-nav__list">
         <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -64,7 +64,7 @@
 
         <p class="weeks-goods__price">Цена: 990 руб.</p>
 
-        <a class="btn btn--weeks-goods" href="order.html">Заказать</a>
+        <a class="btn weeks-goods__btn" href="order.html">Заказать</a>
       </div>
     </section>
 
@@ -99,10 +99,10 @@
         </div>
 
         <div class="reviews__controls">
-          <button class="reviews__btn reviews__btn--prev" type="button"><span class="reviews__hidden">Назад</span></button>
-          <button class="reviews__btn reviews__btn--next" type="button"><span class="reviews__hidden">Вперед</span></button>
+          <button class="reviews__btn reviews__btn--prev" type="button"><span class="visually-hidden">Назад</span></button>
+          <button class="reviews__btn reviews__btn--next" type="button"><span class="visually-hidden">Вперед</span></button>
         </div>
-        <a class="btn btn--reviews" href="reviews.html">Написать</a>
+        <a class="btn reviews__btn" href="reviews.html">Написать</a>
       </div>
     </section>
 
@@ -127,7 +127,7 @@
           width="150" height="100" style="border:0" allowfullscreen></iframe>
       </div>
 
-      <a class="btn btn--contacts" href="feedback.html">Напишите нам</a>
+      <a class="btn contacts__btn" href="feedback.html">Напишите нам</a>
     </section>
   </main>
 
@@ -135,16 +135,16 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <p class="page-footer__social">
-        <span class="page-footer__hidden">Подписывайтесь на нас в соцсетях:</span>
-        <a class="social-btn social-btn--inst" href="#"><span class="page-footer__hidden">Инстаграм</span></a>
-        <a class="social-btn social-btn--fb" href="#"><span class="page-footer__hidden">Фейсбук</span></a>
-        <a class="social-btn social-btn--tw" href="#"><span class="page-footer__hidden">Твиттер</span></a>
+        <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
+        <a class="social-btn social-btn--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
+        <a class="social-btn social-btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+        <a class="social-btn social-btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
       </p>
 
       <p class="page-footer__copyright">
         <b>Разработано</b>
         <a class="page-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="page-footer__hidden">Лендинг интенсива «Продвинутый HTML и CSS»</span>
+          <span class="visually-hidden">Лендинг интенсива «Продвинутый HTML и CSS»</span>
         </a>
       </p>
     </div>
@@ -155,16 +155,16 @@
     <h2 class="modal-size__title">Добавить в корзину</h2>
     <p>Выберите размер:</p>
     <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
-      <input type="radio" class="modal-size__hidden" id="size-s" name="size" value="s" checked>
+      <input type="radio" class="visually-hidden" id="size-s" name="size" value="s" checked>
       <label class="modal-size__label" for="size-s">s</label>
 
-      <input type="radio" class="modal-size__hidden" id="size-m" name="size" value="m">
+      <input type="radio" class="visually-hidden" id="size-m" name="size" value="m">
       <label class="modal-size__label" for="size-m">m</label>
 
-      <input type="radio" class="modal-size__hidden" id="size-l" name="size" value="l">
+      <input type="radio" class="visually-hidden" id="size-l" name="size" value="l">
       <label class="modal-size__label" for="size-l">l</label>
 
-      <button class="btn btn--modal-size btn--green-back" type="submit">Добавить</button>
+      <button class="btn modal-size__btn btn--green-back" type="submit">Добавить</button>
     </form>
   </section>
 
