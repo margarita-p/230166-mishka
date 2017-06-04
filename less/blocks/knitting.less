@@ -5,9 +5,9 @@
 
 .knitting__description {
   margin-bottom: 23px;
+
   p {
-    margin: 0;
-    margin-bottom: 18px;
+    margin: 0 0 18px;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
@@ -26,35 +26,38 @@
 }
 
 .knitting__fieldset {
-  margin: 0;
-  margin-bottom: 19px;
+  margin: 0 0 19px;
   padding: 0;
   border: none;
   border-top: 1px solid @palette-primary;
+
   p {
-    margin: 0;
-    margin-bottom: 22px;
+    margin: 0 0 22px;
   }
+
   &--color {
     margin-bottom: -2px;
   }
+
   &--username {
     margin-bottom: 8px;
   }
+
   &--phone {
     margin-bottom: 9px;
   }
+
   &--email {
     margin-bottom: 9px;
   }
+
   &--message {
     margin-bottom: 12px;
   }
 }
 
 .knitting__legend {
-  margin: 0;
-  margin-bottom: 33px;
+  margin: 0 0 33px;
   padding-right: 20px;
   font-weight: 700;
   font-size: 17px;
@@ -62,18 +65,23 @@
   color: @palette-primary;
   text-transform: uppercase;
   text-align: left;
+
   &--color {
     margin-bottom: 35px;
   }
+
   &--username {
     margin-bottom: 28px;
   }
+
   &--phone {
     margin-bottom: 6px;
   }
+
   &--email {
     margin-bottom: 6px;
   }
+
   &--message {
     margin-bottom: 24px;
   }
@@ -102,15 +110,17 @@
   overflow: hidden;
 }
 
-.knitting__input[type="radio"] ~ .knitting__label,
-.knitting__input[type="checkbox"] ~ .knitting__label {
+.knitting__input[type="checkbox"] ~ .knitting__label,
+.knitting__input[type="radio"] ~ .knitting__label {
   position: relative;
   display: block;
   padding-left: 64px;
+
   &::before {
     position: absolute;
     border: 2px solid @palette-paragraph;
   }
+
   &::after {
     position: absolute;
   }
@@ -118,15 +128,17 @@
 
 .knitting__input[type="radio"] ~ .knitting__label {
   margin-bottom: 24px;
+
   &::before {
-      top: -8px;
-      left: 2px;
+    top: -8px;
+    left: 2px;
     .size(34px, 34px);
     border-radius: 50%;
   }
+
   &::after {
-      top: 3px;
-      left: 13px;
+    top: 3px;
+    left: 13px;
     display: none;
     .size(16px, 16px);
     background-color: @palette-primary;
@@ -136,20 +148,22 @@
 
 .knitting__input[type="checkbox"] ~ .knitting__label {
   margin-bottom: 43px;
+
   &::before {
-      top: -11px;
-      left: 1px;
+    top: -11px;
+    left: 1px;
     .size(36px, 35px);
   }
+
   &::after {
-      top: 1px;
-      left: 9px;
+    top: 1px;
+    left: 9px;
     display: none;
     .size(22px, 16px);
     background-image: url("../img/icon-tick.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 }
 
@@ -158,10 +172,10 @@
   display: block;
 }
 
-.knitting__input[type="checkbox"] ~ .knitting__label:hover,
 .knitting__input[type="checkbox"] ~ .knitting__label:focus,
-.knitting__input[type="radio"] ~ .knitting__label:hover,
-.knitting__input[type="radio"] ~ .knitting__label:focus {
+.knitting__input[type="checkbox"] ~ .knitting__label:hover,
+.knitting__input[type="radio"] ~ .knitting__label:focus,
+.knitting__input[type="radio"] ~ .knitting__label:hover {
   &::before {
     border: 2px solid @palette-primary;
   }
@@ -172,15 +186,16 @@
   &:active::before {
     border: 2px solid fade(@palette-paragraph, 30%);
   }
+
   &:active::after {
     display: block;
   }
 }
 
-.knitting__input[type="checkbox"]:checked ~ .knitting__label:hover,
 .knitting__input[type="checkbox"]:checked ~ .knitting__label:focus,
-.knitting__input[type="radio"]:checked ~ .knitting__label:hover,
-.knitting__input[type="radio"]:checked ~ .knitting__label:focus {
+.knitting__input[type="checkbox"]:checked ~ .knitting__label:hover,
+.knitting__input[type="radio"]:checked ~ .knitting__label:focus,
+.knitting__input[type="radio"]:checked ~ .knitting__label:hover {
   &::before {
     border: 2px solid @palette-primary;
   }
@@ -191,14 +206,15 @@
   &:active::before {
     border: 2px solid fade(@palette-paragraph, 30%);
   }
+
   &:active::after {
     display: none;
   }
 }
 
-.knitting__input[type="text"],
-.knitting__input[type="tel"],
 .knitting__input[type="email"],
+.knitting__input[type="tel"],
+.knitting__input[type="text"],
 .knitting__textarea {
   width: 100%;
   padding-top: 16px;
@@ -208,6 +224,7 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
+
   &::placeholder {
     color: rgba(68, 68, 68, 0.3);
   }
@@ -215,16 +232,16 @@
 
 .knitting__input[type="tel"] {
   background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 97% 45%;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 97% 45%;
 }
 
 .knitting__input[type="email"] {
   background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    background-size: 32px;
-    background-position: 99% 60%;
+  background-repeat: no-repeat;
+  background-size: 32px;
+  background-position: 99% 60%;
 }
 
 .knitting__textarea {
@@ -238,8 +255,7 @@
 }
 
 .knitting__remark {
-  margin: 0;
-  margin-bottom: 31px;
+  margin: 0 0 31px;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
