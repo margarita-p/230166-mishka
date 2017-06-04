@@ -5,80 +5,93 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 
-<body>
+<body class="page-body">
 
   <header class="page-header">
     <a class="page-header__logo">
-      <span class="visually-hidden">Магазин «Мишка»</span>
-      <img src="http://placehold.it/150x100" width="150" height="100" alt="Магазин «Мишка»">
+      <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»">
     </a>
 
-    <nav class="main-nav main-nav--open">
-      <span class="visually-hidden">Главное меню</span>
-      <span class="main-nav__toggle"><span class="visually-hidden">Свернуть/развернуь</span></span>
+    <div class="toggle">
+      <a class="toggle__open" href="#"></a>
+      <a class="toggle__close" href="#"></a>
+    </div>
 
+    <nav class="main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
         <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
         <li class="main-nav__item main-nav__item--search"><a href="search.html">Поиск по сайту</a></li>
-        <li class="main-nav__item main-nav__item--cart"><a href="order.html">Корзина: пока пуста</a></li>
+        <li class="main-nav__item main-nav__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
       </ul>
     </nav>
 
-    <section class="page-header__heading page-header__heading--back-image">
-      <h1 class="page-header__title">Милые штуки ручной работы для дома</h1>
-      <div class="page-header__catalog">
-        <a class="page-header__col page-header__col--right-green" href="catalog.html">Предметы интерьера</a>
-        <a class="page-header__col page-header__col--left-green" href="catalog.html">Детские игрушки</a>
-      </div>
-    </section>
+    <div class="page-header__heading page-header__heading--promo">
+      <h1 class="page-header__title">Милые штуки ручной<br> работы для дома</h1>
+    </div>
+
+    <div class="page-header__catalog">
+      <a class="page-header__col page-header__col--interior" href="catalog.html">Предметы<br> интерьера</a>
+      <a class="page-header__col page-header__col--toy" href="catalog.html">Детские<br> игрушки</a>
+    </div>
   </header>
 
 
   <main>
-    <section class="weeks-goods weeks-goods--wave">
+    <section class="weeks-goods">
       <div class="weeks-goods__wrapper">
-        <h2 class="weeks-goods__title">Вязаные корзинки</h2>
+        <h2 class="weeks-goods__title">
+          <span class="weeks-goods__name">Вязаные корзинки</span>
+          <span class="weeks-goods__flag">Товар недели</span>
+        </h2>
+
+        <div class="weeks-goods__description">
+          <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        </div>
 
         <table class="weeks-goods__table">
           <tr class="weeks-goods__tr">
-            <td class="weeks-goods__td">Цвет:</td>
+            <td class="weeks-goods__td weeks-goods__td--first">Цвет:</td>
             <td class="weeks-goods__td">«Тиффани»/серый</td>
           </tr>
           <tr class="weeks-goods__tr">
-            <td class="weeks-goods__td">Диаметр:</td>
+            <td class="weeks-goods__td weeks-goods__td--first">Диаметр:</td>
             <td class="weeks-goods__td">25 см</td>
           </tr>
           <tr class="weeks-goods__tr">
-            <td class="weeks-goods__td">Высота:</td>
+            <td class="weeks-goods__td weeks-goods__td--first">Высота:</td>
             <td class="weeks-goods__td">15 см</td>
           </tr>
         </table>
 
-        <div class="weeks-goods__photo">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Вязаные корзинки">
+        <div class="weeks-goods__gallery">
+          <img class="weeks-goods__photo" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
 
-        <p class="weeks-goods__price">Цена: 990 руб.</p>
+        <span class="weeks-goods__price">Цена: 990 руб.</span>
 
-        <a class="btn weeks-goods__btn" href="order.html">Заказать</a>
+        <a class="btn weeks-goods__btn" href="cart.html">Заказать</a>
       </div>
     </section>
+
+
+    <div class="page-body__wave"></div>
 
 
     <section class="feature">
       <div class="feature__wrapper">
         <h2 class="feature__title">Коротко о нас:</h2>
         <ul class="feature__list">
-          <li class="feature__item feature__item--eco">Экологически чистые материалы</li>
+          <li class="feature__item feature__item--eco">Экологически<br> чистые материалы</li>
           <li class="feature__item feature__item--style">Скандинавский стиль по&nbsp;российской цене</li>
-          <li class="feature__item feature__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
-          <li class="feature__item feature__item--love">Связано вручную с&nbsp;любовью и&nbsp;умилением</li>
+          <li class="feature__item feature__item--heart">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="feature__item feature__item--roll">Связано вручную<br> с&nbsp;любовью и&nbsp;умилением</li>
           <li class="feature__item feature__item--support">Поддержка отечественного производителя</li>
-          <li class="feature__item feature__item--gift">Поставляется в&nbsp;подарочной упаковке</li>
+          <li class="feature__item feature__item--gift">Поставляется<br> в&nbsp;подарочной упаковке</li>
         </ul>
       </div>
     </section>
@@ -89,7 +102,7 @@
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__inner">
           <blockquote class="reviews__item">
-            <p>Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии
+            <p>Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии
               сразу стали более стильными, а&nbsp;также набирают больше лайков!</p>
             <footer class="reviews__badge">
               <cite class="reviews__name">Анастасия Красильникова</cite>
@@ -99,74 +112,76 @@
         </div>
 
         <div class="reviews__controls">
-          <button class="reviews__btn reviews__btn--prev" type="button"><span class="visually-hidden">Назад</span></button>
-          <button class="reviews__btn reviews__btn--next" type="button"><span class="visually-hidden">Вперед</span></button>
+          <button class="reviews__btn-toggle reviews__btn-toggle--prev" type="button"></button>
+          <button class="reviews__btn-toggle reviews__btn-toggle--next" type="button"></button>
         </div>
         <a class="btn reviews__btn" href="reviews.html">Написать</a>
       </div>
     </section>
 
 
+    <div class="page-body__wave"></div>
+
+
     <section class="contacts">
       <div class="contacts__wrapper">
-        <h3 class="contacts__title">Контакты</h3>
+        <h2 class="contacts__title">Контакты</h2>
 
         <p class="contacts__email">
           <span class="contacts__col contacts__col--right">e-mail:</span>
-          <span class="contacts__col contacts__col--left"><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
+          <a class="contacts__col contacts__col--left" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </p>
 
         <p class="contacts__address">
           <span class="contacts__col contacts__col--right">адрес:</span>
-          <span class="contacts__col contacts__col--left">г.&nbsp;Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</span>
+          <span class="contacts__col contacts__col--left">г.&nbsp;Санкт-Петербург,<br> ул.&nbsp;Большая Конюшенная,<br> д.&nbsp;19/8, офис&nbsp;101</span>
         </p>
       </div>
 
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xfbeb3cbd3eed50c8!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCAxMDEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1495816790269"
-          width="150" height="100" style="border:0" allowfullscreen></iframe>
+          width="100%" height="460" style="border:0" allowfullscreen></iframe>
       </div>
 
-      <a class="btn contacts__btn" href="feedback.html">Напишите нам</a>
+      <div class="contacts__wrapper">
+        <a class="btn contacts__btn" href="feedback.html">Напишите нам</a>
+      </div>
     </section>
   </main>
 
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <p class="page-footer__social">
-        <span class="visually-hidden">Подписывайтесь на нас в соцсетях:</span>
-        <a class="social-btn social-btn--inst" href="#"><span class="visually-hidden">Инстаграм</span></a>
-        <a class="social-btn social-btn--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
-        <a class="social-btn social-btn--tw" href="#"><span class="visually-hidden">Твиттер</span></a>
-      </p>
+      <div class="page-footer__social">
+        <a class="social-btn social-btn--inst" href="#"></a>
+        <a class="social-btn social-btn--fb" href="#"></a>
+        <a class="social-btn social-btn--tw" href="#"></a>
+      </div>
 
-      <p class="page-footer__copyright">
-        <b>Разработано</b>
-        <a class="page-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <span class="visually-hidden">Лендинг интенсива «Продвинутый HTML и CSS»</span>
-        </a>
-      </p>
+      <div class="page-footer__copyright">
+        <span>Разработано</span>
+        <a class="page-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"></a>
+      </div>
     </div>
   </footer>
 
 
-  <section class="modal-size">
+  <div class="modal-size">
     <h2 class="modal-size__title">Добавить в корзину</h2>
-    <p>Выберите размер:</p>
+    <span>Выберите размер:</span>
     <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
-      <input type="radio" class="visually-hidden" id="size-s" name="size" value="s" checked>
+      <input type="radio" class="modal-size__input" id="size-s" name="size" value="s" checked>
       <label class="modal-size__label" for="size-s">s</label>
 
-      <input type="radio" class="visually-hidden" id="size-m" name="size" value="m">
+      <input type="radio" class="modal-size__input" id="size-m" name="size" value="m">
       <label class="modal-size__label" for="size-m">m</label>
 
-      <input type="radio" class="visually-hidden" id="size-l" name="size" value="l">
+      <input type="radio" class="modal-size__input" id="size-l" name="size" value="l">
       <label class="modal-size__label" for="size-l">l</label>
 
       <button class="btn modal-size__btn btn--green-back" type="submit">Добавить</button>
     </form>
-  </section>
+  </div>
 
 
 </body>
