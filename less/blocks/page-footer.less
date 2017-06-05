@@ -1,0 +1,71 @@
+.page-footer {
+  background-color: #f1f1f1;
+  margin-top: 30px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.page-footer__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  padding: 25px 0;
+  border-bottom: 1px solid #e5e5e5;
+
+  .social-btn {
+    display: block;
+    margin-right: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &--inst {
+      .size(22px, 21px);
+      background-image: url("../img/icon-insta.svg");
+    }
+
+    &--fb {
+      .size(19px, 29px);
+      background-image: url("../img/icon-fb.svg");
+    }
+
+    &--tw {
+      .size(24px, 20px);
+      background-image: url("../img/icon-twitter.svg");
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  padding: 21px 0;
+
+  span {
+    display: block;
+    margin-right: 30px;
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 700;
+  }
+}
+
+.page-footer__logo-htmlacademy {
+  display: block;
+  .size(27px, 35px);
+  background-image: url("../img/logo-htmlacademy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}

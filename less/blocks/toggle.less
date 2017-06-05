@@ -1,0 +1,25 @@
+.toggle__close,
+.toggle__open {
+  position: absolute;
+  top: 30px;
+  right: 31px;
+  display: block;
+  .size(21px, 21px);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.toggle__open {
+  background-image: url("../img/icon-menu-open.svg");
+}
+
+.toggle__close {
+  display: none;
+  background-image: url("../img/icon-menu-close.svg");
+}
+
+.main-nav:hover,
+.toggle:active ~ .main-nav {
+  display: block;
+}

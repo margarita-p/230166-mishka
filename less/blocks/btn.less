@@ -1,0 +1,29 @@
+.btn {
+  display: block;
+  width: 260px;
+  padding: 14px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: @palette-paragraph;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 2px solid @palette-paragraph;
+  outline: none;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: @palette-paragraph;
+    color: #fff;
+  }
+
+  &:active {
+    color: fade(#fff, 30%);
+  }
+}
