@@ -1,39 +1,15 @@
-
-
-
-*::after,
-*::before {
-  content: "";
-}
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin-left: -1px;
-  padding: 0;
-
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  overflow: hidden
-}
-
-
 @import "global/fonts.less";
+@import "global/scaffolding.less";
 
 @import "variables.less";
 @import "mixins.less";
 
-@import "blocks/page-body.less";
+@import "blocks/page-header.less";
+@import "blocks/page-footer.less";
+
 @import "blocks/btn.less";
 @import "blocks/wave.less";
 
-@import "blocks/page-header.less";
 @import "blocks/main-nav.less";
 @import "blocks/logo.less";
 @import "blocks/hamburger.less";
@@ -42,11 +18,10 @@ img {
 @import "blocks/feature.less";
 @import "blocks/reviews.less";
 @import "blocks/contacts.less";
-@import "blocks/email.less";
 
 @import "blocks/goods.less";
 @import "blocks/production.less";
 
 @import "blocks/knitting.less";
-@import "blocks/page-footer.less";
+
 @import "blocks/modal-size.less";

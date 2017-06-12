@@ -4,6 +4,7 @@
   background-image: url("../img/logo-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
+  .state-opacity-item();
   @media @tablet-widths {
     .size(113px, 46px);
     background-image: url("../img/mishka-logo-tablet.png");
@@ -13,8 +14,10 @@
     background-image: url("../img/mishka-logo-desktop.png");
   }
   &--footer {
-    background-image: url("../img/logo-footer.png");
+     display: none;
     @media @tablet-widths {
+      display: block;
+      background-image: url("../img/logo-footer.png");
       .size(102px, 34px);
     }
   }

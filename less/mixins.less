@@ -66,6 +66,17 @@
   height: @height;
 }
 
+.font-bold() {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 700;
+}
+
+.font-normal() {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+
 .shadow-card() {
   &:focus,
   &:hover {
@@ -86,5 +97,23 @@
   @media @desktop-widths {
     font-size: 53px;
     line-height: 57px;
+  }
+}
+
+.state-opacity-item() {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.state-opacity-font() {
+  &:hover {
+    color: fade(#000, 60%);
+  }
+  &:active {
+    color: fade(#000, 30%);
   }
 }
