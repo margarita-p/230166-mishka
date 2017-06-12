@@ -1,3 +1,61 @@
+.wrapper-wide() {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media @tablet-widths {
+    width: 670px;
+    padding: 0 49px;
+  }
+  @media @desktop-widths {
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
+.wrapper-left() {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media @tablet-widths {
+    width: 670px;
+    padding: 0 50px;
+  }
+  @media @desktop-widths {
+    width: 875px;
+    padding-left: 225px;
+    padding-right: 50px;
+  }
+}
+
+.wrapper-right() {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media @tablet-widths {
+    width: 670px;
+    padding: 0 50px;
+  }
+  @media @desktop-widths {
+    width: 875px;
+    padding-right: 225px;
+    padding-left: 50px;
+  }
+}
+
+.wrapper-center() {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+  @media @tablet-widths {
+    width: 670px;
+    padding: 0 50px;
+  }
+  @media @desktop-widths {
+    width: 700px;
+    padding: 0 225px;
+  }
+}
+
 .inline-block() {
   display: inline-block;
   vertical-align: top;
@@ -8,13 +66,54 @@
   height: @height;
 }
 
+.font-bold() {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 700;
+}
+
+.font-normal() {
+  font-family: "Open Sans", "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+
 .shadow-card() {
   &:focus,
   &:hover {
     box-shadow: 0 6px 10px 0 fade(#000, 10%);
   }
-
   &:active {
     box-shadow: 0 3px 5px 0 fade(#000, 10%);
+  }
+}
+
+.font-title() {
+  font-weight: 700;
+  color: #000;
+  @media @tablet-widths {
+    font-size: 43px;
+    line-height: 50px;
+  }
+  @media @desktop-widths {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.state-opacity-item() {
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.state-opacity-font() {
+  &:hover {
+    color: fade(#000, 60%);
+  }
+  &:active {
+    color: fade(#000, 30%);
   }
 }

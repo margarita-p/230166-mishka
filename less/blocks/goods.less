@@ -1,32 +1,67 @@
 .goods {
-  margin-top: 31px;
-  margin-bottom: 30px;
-}
-
-.goods__wrapper {
-  width: 260px;
-  margin: 0 auto;
+  .wrapper-wide();
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  @media @tablet-widths {
+    margin-top: 74px;
+  }
+  @media @desktop-widths {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 123px;
+  }
 }
 
 .goods__card {
-  display: block;
-  width: 260px;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 30px;
+  @media @tablet-widths {
+    flex-direction: row;
+    margin-bottom: 53px;
+  }
+  @media @desktop-widths {
+    flex-direction: column;
+    margin-right: 51px;
+    margin-bottom: 57px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
 }
 
-.goods__link-img {
+.goods__image {
   display: block;
   .size(260px, 195px);
+  background-color: #e6e7e9;
+  @media @tablet-widths {
+    .size(335px, 335px);
+  }
+  @media @desktop-widths {
+    .size(316px, 462px);
+  }
 }
 
 .goods__info {
-  padding: 26px 27px 27px;
-  border: 1px solid #ececec;
+  border: 1px solid @palette-border;
   .shadow-card();
+  @media @tablet-widths {
+    display: flex;
+    flex-direction: column;
+    width: 333px;
+    height: 333px;
+    overflow: auto;
+}
+  @media @desktop-widths {
+    height: auto;
+    width: 314px;
+    flex-grow: 1;
+  }
 }
 
 .goods__title {
-  margin: 0 0 5px;
+  margin: 26px 27px 5px;
   font-size: 17px;
   line-height: 24px;
 
@@ -34,21 +69,33 @@
     color: #000;
     text-decoration: none;
   }
+  @media @tablet-widths {
+    font-size: 20px;
+  }
 }
 
 .goods__description {
   display: block;
-  margin-bottom: 19px;
+    margin: 0px 27px 19px;
   font-weight: 400;
   font-size: 13px;
   line-height: 30px;
+  @media @tablet-widths {
+    font-size: 15px;
+  }
+  @media @desktop-widths {
+    margin-bottom: 13px;
+  }
 }
 
 .goods__footer-card {
   display: flex;
-  margin-top: 19px;
+  margin: 19px 27px 27px;
   padding-top: 21px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @palette-border;
+  @media @tablet-widths {
+    margin-top: auto;
+  }
 }
 
 .goods__price {
@@ -57,6 +104,9 @@
   font-size: 15px;
   line-height: 24px;
   font-weight: 700;
+  @media @tablet-widths {
+    font-size: 17px;
+  }
 }
 
 .goods__cart {
@@ -66,4 +116,10 @@
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.2;
+  @media @tablet-widths {
+    margin-right: 5px;
+  }
+  @media @desktop-widths {
+    margin-right: 3px;
+  }
 }

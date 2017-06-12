@@ -11,22 +11,27 @@
 <body class="page-body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»">
-    </a>
-
-    <div class="toggle">
-      <a class="toggle__open" href="#"></a>
-      <a class="toggle__close" href="#"></a>
-    </div>
-
     <nav class="main-nav">
-      <ul class="main-nav__list">
+      <a class="logo main-nav__logo" href="index.html"><span class="visually-hidden">Магазин «Мишка»</span></a>
+
+      <div class="hamburger main-nav__hamburger">
+        <button type="button" class="hamburger__open"></button>
+        <button type="button" class="hamburger__close"></button>
+      </div>
+
+      <ul class="main-nav__list main-nav__list--catalog-knitting">
         <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
         <li class="main-nav__item main-nav__item--active"><a>Вязание на заказ</a></li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--search-cart">
         <li class="main-nav__item main-nav__item--search"><a href="search.html">Поиск по сайту</a></li>
         <li class="main-nav__item main-nav__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
       </ul>
+      <ul class="main-nav__list main-nav__list--new-sale">
+        <li class="main-nav__item"><a href="#">Новые поступления</a></li>
+        <li class="main-nav__item"><a href="#">Распродажа</a></li>
+      </ul>
+      <span class="delivery main-nav__delivery">Бесплатная доставка по России</span>
     </nav>
 
     <section class="page-header__heading">
@@ -37,86 +42,111 @@
 
   <main>
     <section class="knitting">
-      <div class="knitting__wrapper">
-        <div class="knitting__description">
-          <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <div class="knitting__description">
+        <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      </div>
+
+      <form class="knitting__form" action="https://echo.htmlacademy.ru/">
+
+        <div class="knitting__fieldset knitting__fieldset--kind">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--kind">Тип</h3>
+            <ul class="knitting__list knitting__list--kind">
+              <li><input type="radio" class="knitting__input knitting__input--radio visually-hidden" id="form-kind-interior" name="kind" value="interior" checked>
+                <label class="knitting__label knitting__label" for="form-kind-interior">Аксессуар для интерьера</label></li>
+
+              <li><input type="radio" class="knitting__input knitting__input--radio visually-hidden" id="form-kind-toy" name="kind" value="toy">
+                <label class="knitting__label knitting__label" for="form-kind-toy">Детская игрушка</label></li>
+            </ul>
+          </div>
         </div>
 
-        <form class="knitting__form" action="https://echo.htmlacademy.ru/">
-          <fieldset class="knitting__fieldset knitting__fieldset--kind">
-            <legend class="knitting__legend">Тип</legend>
-            <p><input type="radio" class="knitting__input" id="form-kind-interior" name="kind" value="interior" checked>
-              <label class="knitting__label knitting__label" for="form-kind-interior">Аксессуар для интерьера</label></p>
 
-            <p><input type="radio" class="knitting__input" id="form-kind-toy" name="kind" value="toy">
-              <label class="knitting__label knitting__label" for="form-kind-toy">Детская игрушка</label></p>
-          </fieldset>
+        <div class="knitting__fieldset knitting__fieldset--color">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--color">Цвет</h3>
+            <ul class="knitting__list knitting__list--color knitting__list--wide">
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-white" name="color-white" checked>
+                <label class="knitting__label knitting__label" for="form-color-white">Белый</label></li>
 
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-gray" name="color-gray" checked>
+                <label class="knitting__label knitting__label" for="form-color-gray">Серый</label></li>
 
-          <fieldset class="knitting__fieldset knitting__fieldset--color">
-            <legend class="knitting__legend knitting__legend--color">Цвет</legend>
-            <p><input type="checkbox" class="knitting__input" id="form-color-white" name="color-white" checked>
-              <label class="knitting__label knitting__label" for="form-color-white">Белый</label></p>
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-tiffany" name="color-tiffany">
+                <label class="knitting__label knitting__label" for="form-color-tiffany">«Тиффани»</label></li>
 
-            <p><input type="checkbox" class="knitting__input" id="form-color-gray" name="color-gray" checked>
-              <label class="knitting__label knitting__label" for="form-color-gray">Серый</label></p>
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-black" name="color-black">
+                <label class="knitting__label knitting__label" for="form-color-black">Черный</label></li>
 
-            <p><input type="checkbox" class="knitting__input" id="form-color-tiffany" name="color-tiffany">
-              <label class="knitting__label knitting__label" for="form-color-tiffany">«Тиффани»</label></p>
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-pink" name="color-pink">
+                <label class="knitting__label knitting__label" for="form-color-pink">Розовый</label></li>
 
-            <p><input type="checkbox" class="knitting__input" id="form-color-black" name="color-black">
-              <label class="knitting__label knitting__label" for="form-color-black">Черный</label></p>
-
-            <p><input type="checkbox" class="knitting__input" id="form-color-pink" name="color-pink">
-              <label class="knitting__label knitting__label" for="form-color-pink">Розовый</label></p>
-
-            <p><input type="checkbox" class="knitting__input" id="form-color-orange" name="color-orange">
-              <label class="knitting__label knitting__label" for="form-color-orange">Оранжевый</label></p>
-          </fieldset>
+              <li><input type="checkbox" class="knitting__input knitting__input--checkbox visually-hidden" id="form-color-orange" name="color-orange">
+                <label class="knitting__label knitting__label" for="form-color-orange">Оранжевый</label></li>
+            </ul>
+          </div>
+        </div>
 
 
-          <fieldset class="knitting__fieldset  knitting__fieldset--username">
-            <legend class="knitting__legend knitting__legend--username">ФИО</legend>
-            <p><label class="knitting__label" for="form-username-1">Имя:</label>
-              <input type="text" class="knitting__input" id="form-username-1" name="username-1" placeholder="Введите ваше имя*"></p>
+        <div class="knitting__fieldset  knitting__fieldset--username">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--username">ФИО</h3>
+            <ul class="knitting__list knitting__list--username">
+              <li><label class="knitting__label" for="form-username-1">Имя:</label>
+                <input type="text" class="knitting__input knitting__input--text" id="form-username-1" name="username-1" placeholder="Введите ваше имя*"></li>
 
-            <p><label class="knitting__label" for="form-username-2">Фамилия:</label>
-              <input type="text" class="knitting__input" id="form-username-2" name="username-2" placeholder="Укажите фамилию*"></p>
+              <li><label class="knitting__label" for="form-username-2">Фамилия:</label>
+                <input type="text" class="knitting__input knitting__input--text" id="form-username-2" name="username-2" placeholder="Укажите фамилию*"></li>
 
-            <p><label class="knitting__label" for="form-username-3">Отчество:</label>
-              <input type="text" class="knitting__input" id="form-username-3" name="username-3" placeholder="Отчество, если желаете"></p>
-          </fieldset>
-
-
-          <fieldset class="knitting__fieldset knitting__fieldset--phone">
-            <legend class="knitting__legend knitting__legend--phone">Тел</legend>
-            <p><input type="tel" class="knitting__input" id="form-phone" name="phone" placeholder="+7 ХХХ ХХ ХХ*">
-          </fieldset>
+              <li><label class="knitting__label" for="form-username-3">Отчество:</label>
+                <input type="text" class="knitting__input knitting__input--text" id="form-username-3" name="username-3" placeholder="Отчество, если желаете"></li>
+            </ul>
+          </div>
+        </div>
 
 
-          <fieldset class="knitting__fieldset knitting__fieldset--email">
-            <legend class="knitting__legend knitting__legend--email">E-mail</legend>
-            <p><input type="email" class="knitting__input" id="form-email" name="email" placeholder="Ваш Email*">
-          </fieldset>
+        <div class="knitting__fieldset knitting__fieldset--phone">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--phone">Тел</h3>
+            <ul class="knitting__list knitting__list-phone">
+              <li><input type="tel" class="knitting__input knitting__input--tel" name="phone" placeholder="+7 ХХХ ХХ ХХ*"></li>
+            </ul>
+          </div>
+        </div>
 
 
-          <fieldset class="knitting__fieldset knitting__fieldset--message">
-            <legend class="knitting__legend knitting__legend--message">Доп</legend>
-            <textarea class="knitting__textarea" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+        <div class="knitting__fieldset knitting__fieldset--email">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--email">E-mail</h3>
+            <ul class="knitting__list knitting__list--email">
+              <li><input type="email" class="knitting__input knitting__input--email" name="email" placeholder="Ваш Email*"></li>
+            </ul>
+          </div>
+        </div>
 
-          <p class="knitting__remark"><sup>*</sup>Поля обязательны для заполнения</p>
 
+        <div class="knitting__fieldset knitting__fieldset--message">
+          <div class="knitting__wrapper">
+            <h3 class="knitting__title knitting__title--message">Доп</h3>
+            <ul class="knitting__list knitting__list--message">
+              <li><textarea class="knitting__input knitting__input--textarea" name="message" placeholder="Опишите все ваши пожелания к заказу"></textarea></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="knitting__wrapper knitting__wrapper--form">
+          <p class="knitting__remark">*Поля обязательны для заполнения</p>
           <button class="btn knitting__btn" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+        </div>
 
-        </form>
-      </div>
+      </form>
     </section>
   </main>
 
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <a class="logo logo--footer page-footer__logo" href="index.html"><span class="visually-hidden">Магазин «Мишка»</span></a>
       <div class="page-footer__social">
         <a class="social-btn social-btn--inst" href="#"></a>
         <a class="social-btn social-btn--fb" href="#"></a>

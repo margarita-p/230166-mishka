@@ -11,22 +11,27 @@
 <body class="page-body">
 
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»">
-    </a>
-
-    <div class="toggle">
-      <a class="toggle__open" href="#"></a>
-      <a class="toggle__close" href="#"></a>
-    </div>
-
     <nav class="main-nav">
-      <ul class="main-nav__list">
+      <a class="logo main-nav__logo" href="index.html"><span class="visually-hidden">Магазин «Мишка»</span></a>
+
+      <div class="hamburger main-nav__hamburger">
+        <button type="button" class="hamburger__open"></button>
+        <button type="button" class="hamburger__close"></button>
+      </div>
+
+      <ul class="main-nav__list main-nav__list--catalog-knitting">
         <li class="main-nav__item main-nav__item--active"><a>Каталог товаров</a></li>
         <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+      </ul>
+      <ul class="main-nav__list main-nav__list--search-cart">
         <li class="main-nav__item main-nav__item--search"><a href="search.html">Поиск по сайту</a></li>
         <li class="main-nav__item main-nav__item--cart"><a href="cart.html">Корзина: пока пуста</a></li>
       </ul>
+      <ul class="main-nav__list main-nav__list--new-sale">
+        <li class="main-nav__item"><a href="#">Новые поступления</a></li>
+        <li class="main-nav__item"><a href="#">Распродажа</a></li>
+      </ul>
+      <span class="delivery main-nav__delivery">Бесплатная доставка по России</span>
     </nav>
 
     <div class="page-header__heading">
@@ -37,9 +42,8 @@
 
   <main>
     <section class="goods">
-      <div class="goods__wrapper">
         <article class="goods__card">
-          <a class="goods__link-img" href="catalog-item.html">
+          <a class="goods__image" href="catalog-item.html">
             <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
           </a>
           <div class="goods__info">
@@ -47,13 +51,13 @@
             <span class="goods__description">Рост 30 см, вес 200 г</span>
             <div class="goods__footer-card">
               <span class="goods__price">1 200 руб.</span>
-              <a class="goods__cart" href="cart.html"></a>
+              <a class="goods__cart js-modal-open" href="cart.html"></a>
             </div>
           </div>
         </article>
 
         <article class="goods__card">
-          <a class="goods__link-img" href="catalog-item.html">
+          <a class="goods__image" href="catalog-item.html">
             <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
           </a>
           <div class="goods__info">
@@ -61,46 +65,45 @@
             <span class="goods__description">Диаметр 15 см, высота 10 см</span>
             <div class="goods__footer-card">
               <span class="goods__price">690 руб.</span>
-              <a class="goods__cart" href="cart.html"></a>
+              <a class="goods__cart js-modal-open" href="cart.html"></a>
             </div>
           </div>
         </article>
 
         <article class="goods__card">
-          <a class="goods__link-img" href="catalog-item.html">
+          <a class="goods__image" href="catalog-item.html">
             <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
           </a>
           <div class="goods__info">
-            <h2 class="goods__title"><a href="catalog-item.html">Большая корзинка для игрушек</a></h2>
+            <h2 class="goods__title"><a href="catalog-item.html">Большая корзинка<br> для игрушек</a></h2>
             <span class="goods__description">Диаметр 30 см, высота 30 см</span>
             <div class="goods__footer-card">
               <span class="goods__price">1 500 руб.</span>
-              <a class="goods__cart" href="cart.html"></a>
+              <a class="goods__cart js-modal-open" href="cart.html"></a>
             </div>
           </div>
         </article>
-      </div>
     </section>
 
+
     <section class="production">
-      <div class="production__wrapper">
-        <article class="production__card">
-          <h2 class="production__title">Процесс производства</h2>
-          <div class="production__video">
-            <span class="production__icon"></span>
-          </div>
-          <div class="productiion-description">
-            <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          </div>
-          <a class="btn production__btn" href="form.html">Сделать заказ</a>
-        </article>
-      </div>
+      <article class="production__card">
+        <h2 class="production__title">Процесс производства</h2>
+        <div class="production__video">
+          <span class="production__play"></span>
+        </div>
+        <div class="productiion-description">
+          <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        </div>
+        <a class="btn production__btn" href="form.html">Сделать заказ</a>
+      </article>
     </section>
   </main>
 
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+      <a class="logo logo--footer page-footer__logo" href="index.html"><span class="visually-hidden">Магазин «Мишка»</span></a>
       <div class="page-footer__social">
         <a class="social-btn social-btn--inst" href="#"></a>
         <a class="social-btn social-btn--fb" href="#"></a>
@@ -116,21 +119,29 @@
 
 
   <div class="modal-size">
-    <h2 class="modal-size__title">Добавить в корзину</h2>
-    <span>Выберите размер:</span>
-    <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
-      <input type="radio" class="modal-size__input" id="size-s" name="size" value="s" checked>
-      <label class="modal-size__label" for="size-s">s</label>
+    <div class="modal-size__wrapper">
+      <h2 class="modal-size__title">Добавить в&nbsp;корзину</h2>
+      <span class="modal-size__text">Выберите размер:</span>
+      <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
+        <ul class="modal-size__list">
+          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-s" name="size-s" checked>
+            <label class="modal-size__label" for="form-size-s">s</label></li>
 
-      <input type="radio" class="modal-size__input" id="size-m" name="size" value="m">
-      <label class="modal-size__label" for="size-m">m</label>
+          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-m" name="size-m">
+          <label class="modal-size__label" for="form-size-m">m</label></li>
 
-      <input type="radio" class="modal-size__input" id="size-l" name="size" value="l">
-      <label class="modal-size__label" for="size-l">l</label>
+          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-l" name="size-l">
+            <label class="modal-size__label" for="form-size-l">l</label></li>
+        </ul>
 
-      <button class="btn modal-size__btn btn--green-back" type="submit">Добавить</button>
-    </form>
+        <button class="btn btn--palette-primary modal-size__btn js-modal-close" type="submit">Добавить</button>
+      </form>
+    </div>
   </div>
+  <div class="modal-overlay"></div>
+
+
+  <script src="js/script.js"></script>
 
 
 </body>

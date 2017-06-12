@@ -1,26 +1,50 @@
 .page-footer {
-  background-color: #f1f1f1;
-  margin-top: 30px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  background-color: @palette-background;
+  margin-top: 25px;
 }
 
 .page-footer__wrapper {
+  .wrapper-wide();
   display: flex;
-  flex-wrap: wrap;
-  width: 260px;
-  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+
+  @media @tablet-widths {
+    flex-direction: row;
+    padding: 33px 0;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+  min-width: 260px;
+  @media @tablet-widths {
+    display: block;
+    min-width: 200px;
+    margin-top: -10px;
+    margin-right: auto;
+    background-position: left top;
+  }
 }
 
 .page-footer__social {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
+  flex-wrap: wrap;
+  min-width: 260px;
   padding: 25px 0;
   border-bottom: 1px solid #e5e5e5;
-
+  @media @tablet-widths {
+    min-width: 200px;
+    border-bottom: none;
+  }
   .social-btn {
     display: block;
-    margin-right: 40px;
+    margin-right: 38px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -38,6 +62,8 @@
     &--tw {
       .size(24px, 20px);
       background-image: url("../img/icon-twitter.svg");
+      @media @tablet-widths {
+      }
     }
 
     &:last-child {
@@ -50,9 +76,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260px;
+  min-width: 260px;
   padding: 21px 0;
-
+  @media @tablet-widths {
+    min-width: 200px;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
   span {
     display: block;
     margin-right: 30px;
@@ -67,5 +97,4 @@
   .size(27px, 35px);
   background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
-  background-position: center;
 }

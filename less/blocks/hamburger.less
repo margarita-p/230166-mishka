@@ -1,25 +1,26 @@
-.toggle__close,
-.toggle__open {
-  position: absolute;
-  top: 30px;
-  right: 31px;
+.hamburger {
+  .size(21px, 21px);
+  @media @tablet-widths {
+    display: none;
+  }
+}
+
+.hamburger__close,
+.hamburger__open {
   display: block;
   .size(21px, 21px);
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
+  box-shadow: none;
+  border: none;
 }
 
-.toggle__open {
+.hamburger__open {
   background-image: url("../img/icon-menu-open.svg");
 }
 
-.toggle__close {
+.hamburger_close {
   display: none;
   background-image: url("../img/icon-menu-close.svg");
-}
-
-.main-nav:hover,
-.toggle:active ~ .main-nav {
-  display: block;
 }
