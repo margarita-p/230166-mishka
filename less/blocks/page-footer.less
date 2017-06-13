@@ -19,10 +19,8 @@
 }
 
 .page-footer__logo {
-  display: none;
   min-width: 260px;
   @media @tablet-widths {
-    display: block;
     min-width: 200px;
     margin-top: -10px;
     margin-right: auto;
@@ -42,34 +40,6 @@
     min-width: 200px;
     border-bottom: none;
   }
-  .social-btn {
-    display: block;
-    margin-right: 38px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    &--inst {
-      .size(22px, 21px);
-      background-image: url("../img/icon-insta.svg");
-    }
-
-    &--fb {
-      .size(19px, 29px);
-      background-image: url("../img/icon-fb.svg");
-    }
-
-    &--tw {
-      .size(24px, 20px);
-      background-image: url("../img/icon-twitter.svg");
-      @media @tablet-widths {
-      }
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
 }
 
 .page-footer__copyright {
@@ -88,7 +58,7 @@
     margin-right: 30px;
     font-size: 19px;
     line-height: 19px;
-    font-weight: 700;
+    .font-bold();
   }
 }
 

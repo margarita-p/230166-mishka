@@ -1,0 +1,27 @@
+.social-btn {
+  display: block;
+  margin-right: 38px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  &--inst {
+    .size(22px, 21px);
+    background-image: url("../img/icon-insta.svg");
+  }
+
+  &--fb {
+    .size(19px, 29px);
+    background-image: url("../img/icon-fb.svg");
+  }
+
+  &--tw {
+    .size(24px, 20px);
+    background-image: url("../img/icon-twitter.svg");
+    @media @tablet-widths {}
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -65,7 +66,7 @@
             <span class="goods__description">Диаметр 15 см, высота 10 см</span>
             <div class="goods__footer-card">
               <span class="goods__price">690 руб.</span>
-              <a class="goods__cart js-modal-open" href="cart.html"></a>
+              <a class="goods__cart" href="cart.html"></a>
             </div>
           </div>
         </article>
@@ -79,7 +80,7 @@
             <span class="goods__description">Диаметр 30 см, высота 30 см</span>
             <div class="goods__footer-card">
               <span class="goods__price">1 500 руб.</span>
-              <a class="goods__cart js-modal-open" href="cart.html"></a>
+              <a class="goods__cart" href="cart.html"></a>
             </div>
           </div>
         </article>
@@ -112,33 +113,34 @@
 
       <div class="page-footer__copyright">
         <span>Разработано</span>
-        <a class="page-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"></a>
+        <a class="page-footer__logo-htmlacademy" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">лендинг интенсива «Продвинутый HTML и CSS»</span></a>
       </div>
     </div>
   </footer>
 
 
   <div class="modal-size">
-    <div class="modal-size__wrapper">
-      <h2 class="modal-size__title">Добавить в&nbsp;корзину</h2>
-      <span class="modal-size__text">Выберите размер:</span>
-      <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
-        <ul class="modal-size__list">
-          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-s" name="size-s" checked>
-            <label class="modal-size__label" for="form-size-s">s</label></li>
+    <div class="modal-size__content">
+      <div class="modal-size__wrapper">
+        <h2 class="modal-size__title">Добавить в&nbsp;корзину</h2>
+        <span class="modal-size__text">Выберите размер:</span>
+        <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
+          <ul class="modal-size__list">
+            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-s" name="size-s" checked>
+                <label class="modal-size__label" for="form-size-s">s</label></li>
 
-          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-m" name="size-m">
-          <label class="modal-size__label" for="form-size-m">m</label></li>
+            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-m" name="size-m">
+                <label class="modal-size__label" for="form-size-m">m</label></li>
 
-          <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-l" name="size-l">
-            <label class="modal-size__label" for="form-size-l">l</label></li>
-        </ul>
+            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-l" name="size-l">
+                <label class="modal-size__label" for="form-size-l">l</label></li>
+          </ul>
 
-        <button class="btn btn--palette-primary modal-size__btn js-modal-close" type="submit">Добавить</button>
-      </form>
+          <button class="btn btn--palette-primary modal-size__btn js-modal-close" type="submit">Добавить</button>
+        </form>
+      </div>
     </div>
   </div>
-  <div class="modal-overlay"></div>
 
 
   <script src="js/script.js"></script>
