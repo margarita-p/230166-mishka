@@ -1,13 +1,11 @@
 .feature {
   .wrapper-left();
-  margin-top: 27px;
   margin-bottom: 55px;
   @media @tablet-widths {
-    margin-top: 51px;
-    margin-bottom: 50px;
+    margin-bottom: 131px;
   }
   @media @desktop-widths {
-    margin-top: 59px;
+    margin-bottom: 131px;
   }
 }
 
@@ -15,21 +13,20 @@
   margin-bottom: 31px;
   font-size: 25px;
   line-height: 30px;
-  .font-title();
+  .font-title-media();
   @media @tablet-widths {
-    margin-bottom: 48px;
+    margin-bottom: 47px;
   }
 }
 
 .feature__content {
   @media @tablet-widths {
-  display: flex;
-}
+    display: flex;
+  }
 }
 
 .feature__list {
-  margin: 0;
-  margin-bottom: 28px;
+  margin: 0 0 28px;
   padding: 0;
   list-style: none;
   @media @tablet-widths {
@@ -37,6 +34,7 @@
       width: 290px;
       margin-right: 45px;
     }
+
     &--left {
       width: 335px;
     }
@@ -46,6 +44,7 @@
       width: 305px;
       margin-right: 45px;
     }
+
     &--left {
       width: 350px;
     }
@@ -58,67 +57,61 @@
   width: 260px;
   margin-bottom: 28px;
   padding-top: 55px;
+
   .font-bold();
   font-size: 17px;
   line-height: 20px;
-  color: #000;
+  color: @palette-title-primary;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
-  &::after {
+  svg {
     position: absolute;
     top: 0;
     left: 0;
-    background-repeat: no-repeat;
-    background-size: contain;
+    fill: @palette-primary;
   }
 
-  &--eco::after {
+  &--eco svg {
     top: 0;
     left: 8px;
     .size(33px, 38px);
-    background-image: url("../img/icon-feature-1.svg");
   }
 
-  &--style::after {
+  &--style svg {
     top: 2px;
     left: 0;
     .size(47px, 27px);
-    background-image: url("../img/icon-feature-3.svg");
   }
 
-  &--heart::after {
+  &--heart svg {
     top: 7px;
     left: 8px;
     .size(34px, 27px);
-    background-image: url("../img/icon-feature-5.svg");
   }
 
-  &--roll::after {
+  &--roll svg {
     top: 4px;
     left: 4px;
     .size(35px, 34px);
-    background-image: url("../img/icon-feature-2.svg");
   }
 
-  &--support::after {
+  &--support svg {
     top: 5px;
     left: -6px;
     .size(55px, 23px);
-    background-image: url("../img/icon-feature-4.svg");
   }
 
-  &--gift::after {
+  &--gift svg {
     top: 3px;
     left: 3px;
     .size(33px, 32px);
-    background-image: url("../img/icon-feature-6.svg");
   }
-
   @media @tablet-widths {
     margin-bottom: 55px;
+    padding-top: 56px;
     font-size: 20px;
     line-height: 22px;
   }

@@ -18,7 +18,7 @@
   padding: 0 30px;
   @media @tablet-widths {
     width: 670px;
-    padding: 0 50px;
+    padding: 0 49px;
   }
   @media @desktop-widths {
     width: 875px;
@@ -33,7 +33,7 @@
   padding: 0 30px;
   @media @tablet-widths {
     width: 670px;
-    padding: 0 50px;
+    padding: 0 49px;
   }
   @media @desktop-widths {
     width: 875px;
@@ -48,13 +48,15 @@
   padding: 0 30px;
   @media @tablet-widths {
     width: 670px;
-    padding: 0 50px;
+    padding: 0 49px;
   }
   @media @desktop-widths {
     width: 700px;
     padding: 0 225px;
   }
 }
+
+
 
 .inline-block() {
   display: inline-block;
@@ -77,6 +79,7 @@
 }
 
 
+
 .shadow-card() {
   &:focus,
   &:hover {
@@ -87,9 +90,9 @@
   }
 }
 
-.font-title() {
+.font-title-media() {
   font-weight: 700;
-  color: #000;
+  color: @palette-title-primary;
   @media @tablet-widths {
     font-size: 43px;
     line-height: 50px;
@@ -100,20 +103,12 @@
   }
 }
 
-.state-opacity-item() {
-  &:hover {
-    opacity: 0.6;
+.state-palette-title-primary() {
+  &:hover,
+  &:focus {
+    color: @palette-title-primary-hover;
   }
   &:active {
-    opacity: 0.3;
-  }
-}
-
-.state-opacity-font() {
-  &:hover {
-    color: fade(#000, 60%);
-  }
-  &:active {
-    color: fade(#000, 30%);
+    color: @palette-title-primary-active;
   }
 }
