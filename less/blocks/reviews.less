@@ -1,13 +1,33 @@
 .reviews {
-  margin-top: 55px;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
+  padding-bottom: 51px;
   @media @tablet-widths {
-    margin-top: 134px;
-    margin-bottom: 118px;
+    margin-bottom: 61px;
+    padding-bottom: 97px;
   }
   @media @desktop-widths {
-    margin-top: 133px;
-    margin-bottom: 165px;
+    margin-bottom: 143px;
+    padding-bottom: 150px;
+  }
+
+  &--wave {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: auto 100%;
+      @media @tablet-widths {
+        height: 17px;
+      }
+      @media @desktop-widths {
+        height: 23px;
+      }
+    }
   }
 }
 
@@ -24,6 +44,10 @@
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
       z-index: -1;
+      @media @retina {
+        background-image: url("../img/review@2x.jpg");
+        background-size: 350px auto;
+      }
       @media @desktop-widths {
         top: -70px;
         left: 50px;
@@ -34,9 +58,11 @@
 
 .reviews__title {
   margin-bottom: 25px;
+  .font-bold();
   font-size: 25px;
   line-height: 30px;
-  .font-title();
+  color: @palette-title-primary;
+  .font-title-media();
   @media @tablet-widths {
     margin-bottom: 50px;
   }
@@ -70,7 +96,7 @@
     margin-top: 60px;
   }
   @media @desktop-widths {
-    margin-top: 42px;
+    margin-top: 40px;
   }
 }
 
@@ -101,31 +127,57 @@
   margin-bottom: 38px;
   @media @tablet-widths {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 50px;
     margin: 0;
   }
 }
 
 .reviews__btn-toggle {
+  position: relative;
   display: block;
   height: 52px;
-  position: relative;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 51px 26px;
   border: 1px solid @palette-border;
+  outline: 0;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 26px;
+    margin-left: -25px;
+    margin-top: -13px;
+  }
+
+  &:focus::after,
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
 
   &--prev {
     width: 130px;
-    background-image: url("../img/icon-left-arrow.svg");
+
+    &::after {
+      background-image: url("../img/icon-left-arrow.svg");
+    }
   }
 
   &--next {
     width: 131px;
     margin-left: -1px;
-    background-image: url("../img/icon-right-arrow.svg");
+
+    &::after {
+      background-image: url("../img/icon-right-arrow.svg");
+    }
   }
   @media @tablet-widths {
     .size(90px, 50px);

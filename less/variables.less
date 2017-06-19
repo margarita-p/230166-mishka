@@ -1,9 +1,36 @@
-@mobile-widths-only: ~"(max-width: 767px)";
+@mobile-widths: ~"(max-width: 767px)";
 @tablet-widths: ~"(min-width: 768px)";
-@desktop-widths: ~"(min-width: 1250px)";
+@desktop-widths: ~"(min-width: 1150px)";
+@retina: ~"(min-resolution: 144dpi), (min-resolution: 1.5dppx)";
 
+
+// зеленый
 @palette-primary: #63d1bb;
-@palette-secondary: #56c3b2;
+@palette-primary-mod: saturate(@palette-primary, 5%);
+@palette-primary-active: fade(@palette-primary, 30%);
+
+@palette-secondary: desaturate(darken(spin(@palette-primary, 3deg), 5%), 5%);
+@palette-secondary-mod: darken(@palette-secondary, 2%);
+@palette-secondary-mod-active: fade(@palette-secondary-mod, 30%);
+
+
+
+// лампа и лего
+@palette-icon: darken(@palette-secondary, 20%);
+
+
+// заголовки
+@palette-title-primary: #000;
+@palette-title-primary-hover: fade(@palette-title-primary, 60%);
+@palette-title-primary-active: fade(@palette-title-primary, 30%);
+
+@palette-title-secondary: #fff;
+@palette-title-secondary-hover: fade(@palette-title-secondary, 60%);
+@palette-title-secondary-active: fade(@palette-title-secondary, 30%);
+
+
+
 @palette-paragraph: #444444;
+
 @palette-background: #f1f1f1;
 @palette-border: #ececec;

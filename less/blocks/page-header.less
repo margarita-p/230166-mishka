@@ -1,52 +1,118 @@
 .page-header {
   position: relative;
   margin-bottom: 20px;
+  border-top: 1px solid @palette-border;
+
+  &::after {
+    position: absolute;
+    bottom: -1px;
+
+    display: none;
+    .size(100%, 24px);
+
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    z-index: 1;
+  }
   @media @tablet-widths {
+    margin-bottom: 30px;
+
     &::after {
-      position: absolute;
-      bottom: 0;
       display: block;
-      height: 20px;
-      width: 100%;
-      z-index: 100;
-      background-image: radial-gradient(circle at 10px 15px, #fff 12px, transparent 13px), radial-gradient(circle at 10px 0px, transparent 12px, #fff 13px);
-      background-repeat: repeat-x;
-      background-size: 40px 20px, 20px 20px;
     }
+  }
+  @media @desktop-widths {
+    margin-bottom: 50px;
+
+    &::after {
+      height: 34px;
+    }
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  @media @tablet-widths {
+    width: 670px;
+    padding: 0 49px;
+  }
+  @media @desktop-widths {
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
+.page-header__inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid transparent;
+  @media @tablet-widths {
+    margin-bottom: -80px;
+  }
+  @media @desktop-widths {
+    margin: 0 auto -80px;
+  }
+}
+
+// __________________________
+
+.page-header__logo {
+  display: block;
+  .size(86px, 35px);
+  margin: 0 auto;
+  z-index: 2;
+  @media @desktop-widths {
+    margin: 0 auto;
+  }
+
+  img:focus,
+  img:hover {
+    opacity: 0.6;
+  }
+
+  img:active {
+    opacity: 0.3;
+  }
+
+  &--static {
+    img:active,
+    img:focus,
+    img:hover {
+      opacity: 1;
+    }
+  }
+  @media @tablet-widths {
+    .size(113px, 46px);
+    margin-top: 7px;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  @media @desktop-widths {
+    .size(149px, 72px);
+    margin: 4px auto 0;
+  }
+}
+
+// ______________________
+
+.page-header__hamburger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  .size(21px, 21px);
+  z-index: 10;
+  @media @tablet-widths {
+    display: none;
   }
 }
 
 .page-header__heading {
-  background-color: #f1f1f1;
-  border-top: 1px solid #f1f1f1;
-
-  .page-header__title {
-    padding-top: 70px;
-    padding-bottom: 75px;
-  }
-  @media @tablet-widths {
-    margin-top: -61px;
-
-    .page-header__title {
-      padding-top: 95px;
-      padding-bottom: 85px;
-    }
-  }
-  @media @desktop-widths {
-    .page-header__title {
-      padding-top: 93px;
-      padding-bottom: 109px;
-    }
-  }
-}
-
-.page-header__promo {
-  position: relative;
-  min-height: 488px;
-  background-image: url("../img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center -20px;
-  background-color: #f9f9f9;
+  background-color: @palette-background;
   border-top: 1px solid @palette-border;
 
   .page-header__title {
@@ -54,17 +120,65 @@
     padding-bottom: 75px;
   }
   @media @tablet-widths {
-    min-height: 750px;
-    margin-top: -61px;
-    background-image: url("../img/hero-tablet@1x.jpg");
-    background-position: center;
-
     .page-header__title {
-      padding-top: 153px;
-      padding-bottom: 80px;
+      padding-top: 95px;
+      padding-bottom: 92px;
+    }
+  }
+  @media @desktop-widths {
+    .page-header__title {
+      padding-top: 93px;
+      padding-bottom: 120px;
     }
   }
 }
+
+.page-header__promo {
+  display: flex;
+  flex-direction: column;
+  min-height: 488px;
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center -20px;
+  background-color: #f9f9f9;
+  @media @retina {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
+  border-top: 1px solid @palette-border;
+  z-index: -1;
+
+  .page-header__title {
+    margin-top: 70px;
+    margin-bottom: 122px;
+  }
+  @media @tablet-widths {
+    background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center top;
+    @media @retina {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+
+    .page-header__title {
+      margin-top: 153px;
+      margin-bottom: 373px;
+    }
+  }
+  @media @desktop-widths {
+    background-size: 1250px 746px;
+    background-position: center top;
+    @media @retina {
+      background-size: 1250px 746px;
+    }
+
+    .page-header__title {
+      margin-bottom: 358px;
+    }
+  }
+}
+
+// ______________________
 
 .page-header__title {
   width: 260px;
@@ -72,80 +186,113 @@
   font-size: 27px;
   line-height: 30px;
   text-align: center;
-  margin: 0 auto auto;
+  margin: 0 auto;
   @media @tablet-widths {
-    width: auto;
+    width: 670px;
     font-size: 43px;
     line-height: 50px;
   }
   @media @desktop-widths {
+    width: 1050px;
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .page-header__catalog {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: auto auto 0;
   width: 320px;
-  margin: 0 auto 0 -160px;
   @media @tablet-widths {
+    flex-direction: row;
     width: 670px;
-    margin-left: -335px;
   }
   @media @desktop-widths {
     width: 1050px;
-    margin-left: -525px;
   }
 }
 
+// _______________________
+
 .page-header__col {
   position: relative;
-  display: block;
-  flex-grow: 1;
-  min-width: 200px;
-  padding: 25px 30px 30px;
+  width: 320px;
+  padding: 25px 100px 30px 30px;
   .font-bold();
   font-size: 19px;
   line-height: 24px;
-  color: #fff;
+  color: @palette-title-secondary;
   text-decoration: none;
+  box-sizing: border-box;
 
-  &::after {
+  &:focus svg,
+  &:hover svg {
+    fill: fade(@palette-icon, 70%);
+  }
+
+  &:active {
+    color: @palette-title-secondary-active;
+
+    svg {
+      fill: fade(@palette-icon, 30%);
+    }
+  }
+
+  svg {
     position: absolute;
-    margin-top: -30px;
-    background-repeat: no-repeat;
+    top: 20px;
+    right: 30px;
+    fill: fade(@palette-icon, 50%);
   }
 
   &--interior {
     background-color: @palette-primary;
 
-    &::after {
-      top: 53px;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: @palette-primary-mod;
+    }
+
+    svg {
+      top: 22px;
       right: 35px;
       .size(41px, 62px);
-      background-image: url("../img/icon-interior.svg");
+      @media @tablet-widths {
+        top: 30px;
+      }
     }
   }
 
   &--toy {
     background-color: @palette-secondary;
 
-    &::after {
-      top: 51px;
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: @palette-secondary-mod;
+    }
+
+    svg {
       right: 26px;
       .size(61px, 61px);
-      background-image: url("../img/icon-toy.svg");
+      @media @tablet-widths {
+        top: 32px;
+        right: 35px;
+      }
     }
   }
   @media @tablet-widths {
     font-size: 20px;
+    width: 335px;
     line-height: 30px;
     padding-top: 28px;
-    padding-bottom: 36px;
+    padding-bottom: 43px;
     padding-left: 36px;
+  }
+  @media @desktop-widths {
+    width: 525px;
+    padding-bottom: 48px;
   }
 }

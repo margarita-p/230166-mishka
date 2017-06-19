@@ -2,11 +2,11 @@
   margin-top: 23px;
   margin-bottom: 55px;
   @media @tablet-widths {
-    margin-top: 67px;
+    margin-top: 60px;
     margin-bottom: 50px;
   }
   @media @desktop-widths {
-    margin-top: 116px;
+    margin-top: 105px;
   }
 }
 
@@ -34,7 +34,9 @@
     border-top: none;
   }
 }
-// ______________________________
+
+
+// ______start knitting__fieldset_______
 
 .knitting__fieldset {
   &--kind {
@@ -45,7 +47,7 @@
   }
 
   &--color {
-    margin-bottom: 31px;
+    margin-bottom: 32px;
 
     .knitting__wrapper {
       .wrapper-wide();
@@ -105,7 +107,9 @@
     }
   }
 }
-// _____________________________
+// ______end knitting__fieldset_______
+
+// ________start knitting__list________
 
 .knitting__list {
   margin: 0;
@@ -172,7 +176,6 @@
       margin-bottom: 22px;
     }
     @media @tablet-widths {
-      width: 700px;
       li {
         display: flex;
         align-items: center;
@@ -183,8 +186,44 @@
       }
     }
   }
+
+  &--phone,
+  &--email {
+    li {
+      position: relative;
+      svg {
+        position: absolute;
+        fill: fade(#000, 20%);
+      }
+    }
+  }
+
+  &--phone {
+    svg {
+      .size(25px, 25px);
+      top: 10px;
+      right: 10px;
+      @media @tablet-widths {
+        right: 25px;
+      }
+    }
+  }
+
+  &--email {
+    svg {
+      .size(32px, 32px);
+      top: 10px;
+      right: 5px;
+      @media @tablet-widths {
+        right: 20px;
+      }
+    }
+  }
 }
-// ______________________________
+
+// ________end knitting__list________
+//
+// ________start knitting__title ______
 
 .knitting__title {
   display: flex;
@@ -225,7 +264,7 @@
   }
 
   &--color {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     @media @tablet-widths {
       margin-top: 18px;
     }
@@ -259,7 +298,10 @@
     }
   }
 }
-// ______________________________
+
+// _______end knitting__title_______
+//
+// ______start checkbox_&_radio______
 
 .knitting__input--checkbox ~ .knitting__label,
 .knitting__input--radio ~ .knitting__label {
@@ -379,7 +421,10 @@
     display: none;
   }
 }
-// ______________________________
+
+// ________end checkbox_&_radio________
+//
+// ________start label_&_input_________
 
 .knitting__label {
   display: block;
@@ -395,29 +440,27 @@
 
 .knitting__input {
   &--email,
-  &--tel,
+  &--phone,
   &--text,
   &--textarea {
     width: 100%;
     padding-top: 13px;
     padding-bottom: 13px;
     border: none;
-    font-family: "Open Sans", "Tahoma", sans-serif;
     .font-normal();
     font-size: 17px;
     line-height: 24px;
     background-color: transparent;
     box-sizing: border-box;
+    outline: none;
     @media @tablet-widths {
       font-size: 19px;
       line-height: 24px;
-      padding-left: 17px;
-      padding-top: 14px;
-      padding-bottom: 14px;
+      padding: 14px 17px;
     }
 
     &::placeholder {
-      font-family: "Open Sans", "Tahoma", sans-serif;
+      .font-normal();
       font-size: 17px;
       line-height: 18px;
       color: rgba(68, 68, 68, 0.3);
@@ -431,37 +474,29 @@
 
 .knitting__input {
   &--email,
-  &--tel,
+  &--phone,
   &--text {
     border-bottom: 2px solid #000;
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom: 2px solid @palette-primary;
+    }
   }
 }
 
-.knitting__input--tel {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-size: 25px;
-  background-position: 97% 45%;
-  @media @tablet-widths {
-    background-position: 95% 45%;
-  }
-  @media @desktop-widths {
-    background-position: 99% 45%;
+.knitting__input {
+  &--email,
+  &--phone {
+    padding-right: 60px;
+    &:hover ~ svg,
+    &:focus ~ svg,
+    &:active ~ svg {
+      fill: @palette-primary;
+    }
   }
 }
 
-.knitting__input--email {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-size: 32px;
-  background-position: 99% 60%;
-  @media @tablet-widths {
-    background-position: 95.5% 65%;
-  }
-  @media @desktop-widths {
-    background-position: 99.5% 65%;
-  }
-}
 
 .knitting__input--textarea {
   display: block;
@@ -474,10 +509,19 @@
   @media @tablet-widths {
     padding: 13px 15px 15px;
   }
-}
-// ______________________________
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid @palette-primary;
+  }
 
-.knitting__wrapper--form {
+}
+
+// _______end label_&_input________
+//
+// ________сноска и кнопка__________
+
+.knitting__wrapper-footer {
   .wrapper-center();
   @media @tablet-widths {
     display: flex;
@@ -503,6 +547,10 @@
   margin-top: 31px;
   font-size: 17px;
   line-height: 20px;
+  &:hover {
+    outline: none;
+  }
+
   @media @tablet-widths {
     order: -1;
     width: 230px;
