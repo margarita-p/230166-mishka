@@ -4,29 +4,17 @@
     margin-bottom: 57px;
   }
   @media @desktop-widths {
-    margin-bottom: 106px;
+    margin-bottom: 105px;
   }
 }
 
 .contacts__wrapper {
   .wrapper-left();
-  &--desktop-widths {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    @media @desktop-widths {
-      position: relative;
-      width: 875px;
-      margin: 0 auto;
-      padding-left: 225px;
-      padding-right: 50px;
-    }
-  }
 }
 
 .contacts__title {
   position: relative;
-  margin: 0 0 31px;
+  margin-bottom: 31px;
   .font-bold();
   font-size: 18px;
   line-height: 20px;
@@ -50,16 +38,6 @@
       left: -112px;
     }
   }
-}
-
-// ___Заливка флажка в заголовке____
-
-#flag-triangle {
-  fill: @palette-primary;
-}
-
-#flag-rect {
-  fill: #000;
 }
 
 .contacts__content {
@@ -117,6 +95,17 @@
   }
 }
 
+.contacts__wrapper-map {
+  width: 100%;
+  @media @desktop-widths {
+    position: relative;
+    width: 875px;
+    margin: 0 auto;
+    padding-left: 225px;
+    padding-right: 50px;
+  }
+}
+
 .contacts__map {
   position: relative;
   .size(100%, 457px);
@@ -148,7 +137,7 @@
       background-size: 525px auto;
     }
   }
-  &::after {
+  svg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -156,12 +145,10 @@
     height: 100px;
     margin-top: calc( -100px/2);
     margin-left: calc( -67px/2);
-    background-image: url("../img/icon-map-pin.svg");
   }
   iframe {
     border: 0;
-    width: 100%;
-    height: 100%;
+    .size(100%, 457px);
   }
 }
 
@@ -175,4 +162,22 @@
     margin-left: 0;
     margin-top: 41px;
   }
+}
+
+//Заливка фона в свг
+
+#flag-triangle {
+  fill: @palette-primary;
+}
+
+#flag-rect {
+  fill: #000;
+}
+
+#pin-outer {
+  fill: #fff;
+}
+
+#pin-inner {
+  fill: @palette-primary;
 }

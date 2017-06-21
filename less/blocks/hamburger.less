@@ -15,8 +15,7 @@
   &::before {
     position: absolute;
     right: 0;
-    width: 22px;
-    height: 2px;
+    .size(22px, 2px);
     background-color: #000;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
@@ -25,15 +24,14 @@
 
 .hamburger__open {
   top: 7px;
-  width: 22px;
-  height: 2px;
+  .size(22px, 2px);
   background-color: #000;
   &::before {
-    top: -7px;
+    top: -6px;
     animation-name: animation-rotate_1-2;
   }
   &::after {
-    top: 7px;
+    top: 6px;
     animation-name: animation-rotate_2-2;
   }
 }

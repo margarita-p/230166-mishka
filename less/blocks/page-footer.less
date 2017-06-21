@@ -3,6 +3,9 @@
   margin-top: 25px;
   padding: 0;
   background-color: @palette-background;
+  @media @tablet-widths {
+    padding: 33px 0;
+  }
 }
 
 .page-footer__wrapper {
@@ -12,7 +15,6 @@
   align-items: center;
   @media @tablet-widths {
     flex-direction: row;
-    padding: 33px 0;
   }
 }
 
@@ -53,7 +55,7 @@
   flex-wrap: wrap;
   min-width: 260px;
   padding: 25px 0;
-  border-bottom: 1px solid @palette-border;
+  border-bottom: 1px solid #e5e5e5;
   @media @tablet-widths {
     min-width: 200px;
     border-bottom: none;

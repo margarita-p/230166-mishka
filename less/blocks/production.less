@@ -21,11 +21,15 @@
     margin-top: 456px;
   }
   @media @desktop-widths {
-    width: 368px;
-    height: 455px;
+    .size(368px, 455px);
+    display: flex;
+    flex-direction: column;
     margin-top: 0;
     margin-left: 682px;
-    padding: 78px 60px 60px 80px;
+    padding-top: 78px;
+    padding-left: 78px;
+    padding-right: 55px;
+    padding-bottom: 60px;
     box-sizing: border-box;
   }
 }
@@ -44,7 +48,7 @@
     font-size: 20px;
   }
   @media @desktop-widths {
-    margin-bottom: 31px;
+    margin-bottom: 33px;
     padding-left: 0;
     font-size: 20px;
   }
@@ -55,11 +59,11 @@
     .size(32px, 32px);
     fill: @palette-primary;
     @media @tablet-widths {
-      top: 0;
+      top: -5px;
       left: 0;
     }
     @media @desktop-widths {
-      top: -50px;
+      top: -55px;
       left: 2px;
     }
   }
@@ -124,19 +128,6 @@
   }
 }
 
-// для иконки play
-#play-inner {
-  fill: @palette-primary;
-}
-
-#play-outer {
-  fill: #fff;
-}
-
-#play-triangle {
-  fill: #fff;
-}
-
 .production-card__description {
   .font-normal();
   font-size: 13px;
@@ -159,4 +150,17 @@
   @media @desktop-widths {
     margin-top: auto;
   }
+}
+
+// для иконки play
+#play-inner {
+  fill: @palette-primary;
+}
+
+#play-outer {
+  fill: #fff;
+}
+
+#play-triangle {
+  fill: #fff;
 }

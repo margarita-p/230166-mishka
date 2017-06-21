@@ -122,7 +122,7 @@
     @media @tablet-widths {
       li {
         display: block;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
       }
     }
   }
@@ -133,11 +133,10 @@
     @media @tablet-widths {
       display: flex;
       flex-wrap: wrap;
-
       li {
         width: 240px;
         margin-right: 20px;
-        margin-bottom: 24px;
+        margin-bottom: 25px;
       }
       li:nth-child(2n) {
         margin-right: 0;
@@ -174,10 +173,15 @@
   &--email {
     li {
       position: relative;
-      svg {
-        position: absolute;
-        fill: fade(#000, 20%);
+      &:hover svg,
+      &:focus svg,
+      &:active svg {
+        fill: @palette-primary;
       }
+    }
+    svg {
+      position: absolute;
+      fill: fade(#000, 20%);
     }
   }
   &--phone {
@@ -186,7 +190,11 @@
       top: 10px;
       right: 10px;
       @media @tablet-widths {
+        top: 13px;
         right: 25px;
+      }
+      @media @desktop-widths {
+        right: 8px;
       }
     }
   }
@@ -196,7 +204,11 @@
       top: 10px;
       right: 5px;
       @media @tablet-widths {
-        right: 20px;
+        top: 12px;
+        right: 21px;
+      }
+      @media @desktop-widths {
+        right: 5px;
       }
     }
   }
@@ -208,7 +220,7 @@
 .knitting__title {
   display: flex;
   align-items: center;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
   .font-bold();
   font-size: 17px;
   line-height: 18px;
@@ -228,8 +240,7 @@
   }
   &::after {
     flex-grow: 1;
-    width: 50px;
-    height: 1px;
+    .size(50px, 1px);
     background-color: @palette-primary;
     margin-left: 25px;
   }
@@ -278,9 +289,13 @@
 .knitting__input--radio ~ .knitting__label {
   position: relative;
   display: block;
-  padding: 10px 0 10px 62px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 62px;
   @media @tablet-widths {
-    padding: 16px 16px 16px 81px;
+    padding-left: 80px;
+    padding-top: 12px;
+    padding-bottom: 15px;
   }
   &::before {
     position: absolute;
@@ -387,17 +402,28 @@
   }
 }
 
-
+.knitting__input--checkbox:disabled ~ .knitting__label,
+.knitting__input--radio:disabled ~ .knitting__label,
+.knitting__input--checkbox.disabled ~ .knitting__label,
+.knitting__input--radio.disabled ~ .knitting__label, {
+  color: fade(@palette-title-primary, 30%);
+  &::before {
+    border: 2px solid fade(@palette-paragraph, 30%);
+  }
+  &::after {
+    display: none;
+  }
+}
 
 .knitting__label {
   display: block;
   .font-bold();
   font-size: 17px;
   line-height: 18px;
-  color: #000;
+  color: @palette-title-primary;
   @media @tablet-widths {
     font-size: 19px;
-    line-height: 20px;
+    line-height: 24px;
   }
 }
 
@@ -419,7 +445,9 @@
     @media @tablet-widths {
       font-size: 19px;
       line-height: 24px;
-      padding: 14px 17px;
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-left: 17px;
     }
     &::placeholder {
       .font-normal();
@@ -431,6 +459,10 @@
         line-height: 24px;
       }
     }
+  }
+  &--email,
+  &--phone {
+    padding-right: 60px;
   }
 }
 
@@ -450,30 +482,28 @@
 .knitting__input {
   &--email,
   &--phone {
-    padding-right: 60px;
     &:hover ~ svg,
     &:focus ~ svg,
-    &:active ~ svg {
-      fill: @palette-primary;
+    &:active ~ svg  {
+      fill: red;
     }
   }
 }
 
 .knitting__input--textarea {
   display: block;
-  width: 100%;
-  height: 142px;
+  .size(100%, 142px);
   margin: 0;
   padding: 15px;
   border: 2px solid @palette-paragraph;
   resize: none;
-  @media @tablet-widths {
-    padding: 13px 15px 15px;
-  }
   &:hover,
   &:focus,
   &:active {
     border: 2px solid @palette-primary;
+  }
+  @media @tablet-widths {
+    padding: 10px 15px;
   }
 }
 
@@ -486,7 +516,7 @@
 }
 
 .knitting__remark {
-  margin: 0 0 31px;
+  margin-bottom: 31px;
   .font-normal();
   font-size: 14px;
   line-height: 16px;
