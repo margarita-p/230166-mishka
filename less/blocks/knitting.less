@@ -21,7 +21,6 @@
     font-size: 17px;
     line-height: 30px;
   }
-
   p {
     margin: 0 0 18px;
   }
@@ -36,7 +35,6 @@
 }
 
 
-// ______start knitting__fieldset_______
 
 .knitting__fieldset {
   &--kind {
@@ -45,10 +43,8 @@
       margin-bottom: 27px;
     }
   }
-
   &--color {
     margin-bottom: 32px;
-
     .knitting__wrapper {
       .wrapper-wide();
     }
@@ -57,7 +53,6 @@
       margin-bottom: 48px;
       padding-top: 49px;
       padding-bottom: 27px;
-
       &::after {
         position: absolute;
         top: 0;
@@ -69,14 +64,12 @@
       }
     }
   }
-
   &--username {
     margin-bottom: 30px;
     @media @tablet-widths {
       margin-bottom: 28px;
     }
   }
-
   &--phone {
     margin-bottom: 31px;
     @media @tablet-widths {
@@ -86,7 +79,6 @@
       background-color: @palette-background;
     }
   }
-
   &--email {
     margin-bottom: 31px;
     @media @tablet-widths {
@@ -96,7 +88,6 @@
       background-color: @palette-background;
     }
   }
-
   &--message {
     margin-bottom: 16px;
     @media @tablet-widths {
@@ -107,9 +98,9 @@
     }
   }
 }
-// ______end knitting__fieldset_______
+// end knitting__fieldset
 
-// ________start knitting__list________
+
 
 .knitting__list {
   margin: 0;
@@ -120,12 +111,10 @@
   }
   @media @desktop-widths {
     width: 700px;
-
     &--wide {
       width: 875px;
     }
   }
-
   &--kind {
     li {
       margin-bottom: 4px;
@@ -137,7 +126,6 @@
       }
     }
   }
-
   &--color {
     li {
       margin-bottom: 23px;
@@ -151,7 +139,6 @@
         margin-right: 20px;
         margin-bottom: 24px;
       }
-
       li:nth-child(2n) {
         margin-right: 0;
       }
@@ -160,7 +147,6 @@
       li {
         width: 242px;
       }
-
       li:nth-child(2n) {
         margin-right: 20px;
       }
@@ -170,7 +156,6 @@
       }
     }
   }
-
   &--username {
     li {
       margin-bottom: 22px;
@@ -180,13 +165,11 @@
         display: flex;
         align-items: center;
       }
-
       .knitting__label {
         padding-right: 25px;
       }
     }
   }
-
   &--phone,
   &--email {
     li {
@@ -197,7 +180,6 @@
       }
     }
   }
-
   &--phone {
     svg {
       .size(25px, 25px);
@@ -208,7 +190,6 @@
       }
     }
   }
-
   &--email {
     svg {
       .size(32px, 32px);
@@ -220,10 +201,9 @@
     }
   }
 }
+// end knitting__list
 
-// ________end knitting__list________
-//
-// ________start knitting__title ______
+
 
 .knitting__title {
   display: flex;
@@ -238,7 +218,6 @@
     width: 167px;
     background-color: transparent;
     align-items: flex-start;
-
     &::after {
       display: none;
     }
@@ -247,7 +226,6 @@
     width: 115px;
     margin-left: 60px;
   }
-
   &::after {
     flex-grow: 1;
     width: 50px;
@@ -255,42 +233,36 @@
     background-color: @palette-primary;
     margin-left: 25px;
   }
-
   &--kind {
     margin-bottom: 24px;
     @media @tablet-widths {
       margin-top: 18px;
     }
   }
-
   &--color {
     margin-bottom: 24px;
     @media @tablet-widths {
       margin-top: 18px;
     }
   }
-
   &--username {
     margin-bottom: 28px;
     @media @tablet-widths {
       margin-top: 18px;
     }
   }
-
   &--phone {
     margin-bottom: 6px;
     @media @tablet-widths {
       margin-top: 18px;
     }
   }
-
   &--email {
     margin-bottom: 6px;
     @media @tablet-widths {
       margin-top: 18px;
     }
   }
-
   &--message {
     margin-bottom: 24px;
     @media @tablet-widths {
@@ -298,10 +270,9 @@
     }
   }
 }
+//end knitting__title
 
-// _______end knitting__title_______
-//
-// ______start checkbox_&_radio______
+
 
 .knitting__input--checkbox ~ .knitting__label,
 .knitting__input--radio ~ .knitting__label {
@@ -311,7 +282,6 @@
   @media @tablet-widths {
     padding: 16px 16px 16px 81px;
   }
-
   &::before {
     position: absolute;
     top: 0;
@@ -319,7 +289,6 @@
     border: 2px solid @palette-paragraph;
     z-index: -1;
   }
-
   &::after {
     position: absolute;
     z-index: -1;
@@ -334,7 +303,6 @@
       .size(48px, 48px);
     }
   }
-
   &::after {
     top: 12px;
     left: 12px;
@@ -359,7 +327,6 @@
       .size(50px, 48px);
     }
   }
-
   &::after {
     top: 11px;
     left: 9px;
@@ -396,7 +363,6 @@
   &:active::before {
     border: 2px solid fade(@palette-paragraph, 30%);
   }
-
   &:active::after {
     display: block;
   }
@@ -416,15 +382,12 @@
   &:active::before {
     border: 2px solid fade(@palette-paragraph, 30%);
   }
-
   &:active::after {
     display: none;
   }
 }
 
-// ________end checkbox_&_radio________
-//
-// ________start label_&_input_________
+
 
 .knitting__label {
   display: block;
@@ -458,7 +421,6 @@
       line-height: 24px;
       padding: 14px 17px;
     }
-
     &::placeholder {
       .font-normal();
       font-size: 17px;
@@ -497,7 +459,6 @@
   }
 }
 
-
 .knitting__input--textarea {
   display: block;
   width: 100%;
@@ -514,12 +475,7 @@
   &:active {
     border: 2px solid @palette-primary;
   }
-
 }
-
-// _______end label_&_input________
-//
-// ________сноска и кнопка__________
 
 .knitting__wrapper-footer {
   .wrapper-center();
@@ -550,7 +506,6 @@
   &:hover {
     outline: none;
   }
-
   @media @tablet-widths {
     order: -1;
     width: 230px;

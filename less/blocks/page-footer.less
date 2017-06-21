@@ -1,7 +1,7 @@
 .page-footer {
   width: auto;
+  margin-top: 25px;
   padding: 0;
-  margin: 25px 0 0;
   background-color: @palette-background;
 }
 
@@ -29,17 +29,14 @@
   svg {
     fill: #000;
     .size(102px, 34px);
-
     &:focus,
     &:hover {
-      fill: @palette-secondary-mod;
+      fill: @palette-secondary-hover;
     }
-
     &:active {
-      fill: @palette-secondary-mod-active;
+      fill: @palette-secondary-active;
     }
   }
-
   &--static svg {
     &:active,
     &:focus,
@@ -85,31 +82,26 @@
   @media @tablet-widths {
     justify-content: flex-end;
   }
-
   span {
     display: block;
     margin-right: 30px;
   }
-
   svg {
     .size(27px, 35px);
     fill: @palette-primary;
   }
-
   &:hover,
   &focus {
     svg {
-      fill: @palette-secondary-mod;
+      fill: @palette-secondary-hover;
     }
   }
-
   &:active {
     span {
       color: @palette-title-primary-active;
     }
-
     svg {
-      fill: @palette-secondary-mod-active;
+      fill: @palette-secondary-active;
     }
   }
 }
@@ -122,5 +114,5 @@
 
 .page-footer__copyright-link span:active ~ svg,
 .page-footer__copyright-link svg:active {
-  fill: @palette-secondary-mod-active;
+  fill: @palette-secondary-active;
 }

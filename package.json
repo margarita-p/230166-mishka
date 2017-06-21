@@ -2,7 +2,7 @@
   "name": "mishka",
   "version": "0.1.0",
   "private": true,
-  "description": "Личный проект «Мишка» от HTML Academy",
+  "description": "Личный проект «Мишка» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "assemble-less": "^0.7.0",

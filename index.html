@@ -4,22 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-
   <title>HTML Academy: Мишка</title>
-
   <link href="css/normalize.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
+  <link href="css/style.min.css" rel="stylesheet">
   <script src="js/picturefill.js"></script>
 </head>
 
+
+
 <body>
 
-
-
-
-
-<!-- <<<<<<<<<<<<<<<<<<<<<<<<<________SPRITE________>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- SPRITE -->
 
   <svg style="display:none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <symbol id="icon-search" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
@@ -116,19 +111,16 @@
     <symbol id="logo-htmlacademy" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
       <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
     </symbol>
-
   </svg>
 
 
 
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<________PAGE-HEADER________>>>>>>>>>>>>>>>>>>>>>>> -->
+<!--PAGE-HEADER> -->
 
   <header class="page-header">
     <div class="page-header__wrapper">
 
-<!-- .................................LOGO.................................. -->
+<!--LOGO -->
 
       <div class="page-header__inner">
         <h1 class="page-header__logo page-header__logo--static">
@@ -140,7 +132,7 @@
           </picture>
         </h1>
 
-<!-- ...............................HAMBURGER............................... -->
+<!-- HAMBURGER -->
 
         <div class="hamburger page-header__hamburger">
           <button type="button" class="hamburger__open"><span class="visually-hidden">Развернуть</span></button>
@@ -148,18 +140,18 @@
         </div>
       </div>
 
-<!-- ________________________________MAIN-NAV_______________________________ -->
+<!-- MAIN-NAV -->
 
       <nav class="main-nav main-nav--no-js">
 
-<!-- .......................MAIN-NAV каталог и вязание...................... -->
+<!-- MAIN-NAV каталог и вязание -->
 
         <ul class="main-nav__list main-nav__list--catalog-knitting">
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
         </ul>
 
-<!-- .......................MAIN-NAV поиск и корзина........................ -->
+<!-- MAIN-NAV поиск и корзина -->
 
         <ul class="main-nav__list main-nav__list--search-cart">
           <li class="main-nav__item main-nav__item--search">
@@ -171,23 +163,22 @@
           <li class="main-nav__item main-nav__item--cart">
             <a href="cart.html">
               <svg width="21" height="18"><use xlink:href="#icon-cart"></use></svg>
-              <span>Корзина: пока пуста</span>
+              <span>Корзина: пока пуста пока</span>
             </a>
           </li>
         </ul>
 
-<!-- ........................MAIN-NAV новинки и скидки...................... -->
+<!-- MAIN-NAV новинки и скидки -->
 
         <ul class="main-nav__list main-nav__list--new-sale">
           <li class="main-nav__item"><a href="#">Новые поступления</a></li>
           <li class="main-nav__item"><a href="#">Распродажа</a></li>
         </ul>
         <span class="main-nav__delivery">Бесплатная доставка по России</span>
-
       </nav>
     </div>
 
-<!-- ___________________________PAGE-HEADER promo___________________________ -->
+<!-- PAGE-HEADER promo -->
 
     <div class="page-header__promo">
       <div class="page-header__title">Милые штуки ручной<br> работы для дома</div>
@@ -202,28 +193,21 @@
         </a>
       </div>
     </div>
-
   </header>
-
-
 
 
 
   <main>
 
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<________WEEKS-GOODS________>>>>>>>>>>>>>>>>>>>>>>> -->
+<!--WEEKS-GOODS -->
 
     <section class="weeks-goods weeks-goods--wave">
       <div class="weeks-goods__wrapper">
         <h2 class="weeks-goods__title">Вязаные корзинки</h2>
-
         <div class="weeks-goods__content">
           <div class="weeks-goods__description">
             <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           </div>
-
           <table class="weeks-goods__table">
             <tr>
               <td class="weeks-goods__td weeks-goods__td--first">Цвет:</td>
@@ -238,7 +222,6 @@
               <td class="weeks-goods__td">15 см</td>
             </tr>
           </table>
-
           <div class="weeks-goods__image">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
@@ -252,9 +235,7 @@
       </div>
     </section>
 
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<<<________ FUATURE________>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!--FUATURE -->
 
     <section class="feature">
       <h2 class="feature__title">Коротко о нас:</h2>
@@ -273,7 +254,6 @@
             <span>Увеличивает лайки<br> на фотографиях</span>
           </li>
         </ul>
-
         <ul class="feature__list feature__list--left">
           <li class="feature__item feature__item--roll">
             <svg width="34" height="35"><use xlink:href="#icon-feature-roll"></use></svg>
@@ -291,15 +271,12 @@
       </div>
     </section>
 
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<<<<________REVIEWS________>>>>>>>>>>>>>>>>>>>>>>>> -->
+<!--REVIEWS-->
 
     <section class="reviews reviews--wave">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__inner">
-
           <blockquote class="reviews__item">
             <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают
               больше лайков!
@@ -309,9 +286,7 @@
               <a class="reviews__id" href="profile.html">@misssssiskras</a>
             </footer>
           </blockquote>
-
         </div>
-
         <div class="reviews__controls">
           <button class="reviews__btn-toggle reviews__btn-toggle--prev" type="button"></button>
           <button class="reviews__btn-toggle reviews__btn-toggle--next" type="button"></button>
@@ -320,9 +295,7 @@
       </div>
     </section>
 
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<<<<________CONTACTS________>>>>>>>>>>>>>>>>>>>>>>> -->
+<!--CONTACTS-->
 
     <section class="contacts">
       <div class="contacts__wrapper">
@@ -334,14 +307,12 @@
             <span class="contacts__termin">e-mail:</span>
             <span class="contacts__info"><a class="contacts__link-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></span>
           </div>
-
           <div class="contacts__columns contacts__columns--address">
             <span class="contacts__termin">адрес:</span>
             <span class="contacts__info">г.&nbsp;Санкт-Петербург,<br> ул.&nbsp;Большая Конюшенная,<br> д.&nbsp;19/8, офис&nbsp;101</span>
           </div>
         </div>
       </div>
-
       <div class="contacts__wrapper contacts__wrapper--desktop-widths">
         <div class="contacts__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043705176!2d30.320889251833037!3d59.93879418178734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1497505758043"
@@ -350,19 +321,14 @@
         <a class="btn contacts__btn" href="feedback.html">Напишите нам</a>
       </div>
     </section>
-
   </main>
 
-
-
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<________PAGE-FOOTER________>>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- PAGE-FOOTER -->
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
 
-<!-- ............................PAGE-FOOTER logo........................... -->
+<!-- PAGE-FOOTER logo -->
 
       <div class="page-footer__logo">
         <a class="page-footer__logo-link page-footer__logo-link--static">
@@ -371,7 +337,7 @@
         </a>
       </div>
 
-<!-- ...........................PAGE-FOOTER social.......................... -->
+<!-- PAGE-FOOTER social -->
 
       <div class="page-footer__social">
         <a class="social-btn social-btn--inst" href="#">
@@ -385,7 +351,7 @@
         </a>
       </div>
 
-<!-- ..........................PAGE-FOOTER copyright........................ -->
+<!-- PAGE-FOOTER copyright -->
 
       <div class="page-footer__copyright">
         <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
@@ -394,37 +360,29 @@
         </a>
       </div>
     </div>
-
   </footer>
 
-
-
-
-
-<!--<<<<<<<<<<<<<<<<<<<<<<<<________MODAL-SIZE________>>>>>>>>>>>>>>>>>>>>>> -->
+<!-- MODAL-SIZE -->
 
   <div class="modal-size">
     <div class="modal-size__content">
       <div class="modal-size__wrapper">
-
         <h2 class="modal-size__title">Добавить в&nbsp;корзину</h2>
         <span class="modal-size__text">Выберите размер:</span>
-
         <form class="modal-size__form" action="https://echo.htmlacademy.ru/">
           <ul class="modal-size__list">
-            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-s" name="size-s" checked>
+            <li><input type="radio" class="modal-size__input visually-hidden" id="form-size-s" name="size" value="s" checked>
               <label class="modal-size__label" for="form-size-s">s</label>
             </li>
-            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-m" name="size-m">
+            <li><input type="radio" class="modal-size__input visually-hidden" id="form-size-m" name="size" value="m">
               <label class="modal-size__label" for="form-size-m">m</label>
             </li>
-            <li><input type="checkbox" class="modal-size__input visually-hidden" id="form-size-l" name="size-l">
+            <li><input type="radio" class="modal-size__input visually-hidden" id="form-size-l" name="size" value="l">
               <label class="modal-size__label" for="form-size-l">l</label>
             </li>
           </ul>
           <button class="btn btn--palette-primary modal-size__btn js-modal-close" type="submit">Добавить</button>
         </form>
-
       </div>
     </div>
   </div>
@@ -432,5 +390,4 @@
   <script src="js/script.js"></script>
 
 </body>
-
 </html>
