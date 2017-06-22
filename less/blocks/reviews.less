@@ -41,20 +41,19 @@
       background-image: url("../img/review@1x.jpg");
       background-repeat: no-repeat;
       z-index: -1;
-      @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-        background-image: url("../img/review@2x.jpg");
-        background-size: 350px auto;
-      }
       @media @desktop-widths {
         top: -70px;
         left: 50px;
-        background-image: url("../img/review@1x.jpg");
-        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-          background-image: url("../img/review@2x.jpg");
-          background-size: 350px auto;
-        }
       }
     }
+  }
+}
+
+@media @tablet-widths and (min-resolution: 144dpi),
+       @tablet-widths and (min-resolution: 1.5dppx) {
+  .reviews__wrapper::after {
+    background-image: url("../img/review@2x.jpg");
+    background-size: 350px auto;
   }
 }
 
