@@ -1,24 +1,35 @@
 .hamburger {
-  .size(21px, 21px);
+  .size(22px, 22px);
   overflow: hidden;
 }
 
-.hamburger__close,
-.hamburger__open {
+.hamburger__close, .hamburger__open {
   display: block;
-  .size(21px, 21px);
-  background-color: #fff;
+  .size(22px, 22px);
+  background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center;
   box-shadow: none;
   border: none;
+  cursor: pointer;
+  &:active {
+    outline: none;
+  }
 }
 
 .hamburger__open {
   background-image: url("../img/icon-menu-open.svg");
+  background-position: center;
 }
 
-.hamburger_close {
+.hamburger__close {
   display: none;
   background-image: url("../img/icon-menu-close.svg");
+}
+
+.hamburger__show {
+  display: block;
+}
+
+.hamburger__hide {
+  display: none;
 }

@@ -1,49 +1,30 @@
 .contacts {
   margin-bottom: 39px;
-
   @media @tablet-widths {
     margin-bottom: 57px;
   }
-
   @media @desktop-widths {
-    margin-bottom: 106px;
+    margin-bottom: 105px;
   }
 }
 
 .contacts__wrapper {
   .wrapper-left();
-
-  &--desktop-widths {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-
-    @media @desktop-widths {
-      position: relative;
-      width: 875px;
-      margin: 0 auto;
-      padding-left: 225px;
-      padding-right: 50px;
-    }
-  }
 }
 
 .contacts__title {
   position: relative;
-  margin: 0 0 31px;
-
+  margin-bottom: 31px;
   .font-bold();
   font-size: 18px;
   line-height: 20px;
   color: @palette-title-primary;
   .font-title-media();
-
   svg {
     display: none;
   }
   @media @tablet-widths {
     margin-bottom: 48px;
-
     svg {
       position: absolute;
       top: -15px;
@@ -59,27 +40,15 @@
   }
 }
 
-// ___Заливка флажка в заголовке____
-
-#flag-triangle {
-  fill: @palette-primary;
-}
-
-#flag-rect {
-  fill: #000;
-}
-
 .contacts__content {
   .font-normal();
   font-size: 15px;
   line-height: 30px;
-
   @media @tablet-widths {
     display: flex;
     margin-bottom: 19px;
     font-size: 17px;
   }
-
   @media @desktop-widths {
     flex-direction: column;
   }
@@ -88,7 +57,6 @@
 .contacts__columns {
   display: flex;
   align-items: flex-start;
-
   &--email {
     margin-bottom: 29px;
     @media @tablet-widths {
@@ -96,7 +64,6 @@
       margin-right: 45px;
     }
   }
-
   &--address {
     margin-bottom: 38px;
     @media @tablet-widths {
@@ -119,57 +86,78 @@
   color: @palette-paragraph;
   text-decoration: none;
   border-bottom: 1px solid @palette-primary;
-
   &:focus,
   &:hover {
     color: @palette-primary;
   }
-
   &:active {
     opacity: 0.3;
   }
 }
 
+.contacts__wrapper-map {
+  width: 100%;
+  @media @desktop-widths {
+    position: relative;
+    width: 875px;
+    margin: 0 auto;
+    padding-left: 225px;
+    padding-right: 50px;
+  }
+}
+
 .contacts__map {
+  position: relative;
   .size(100%, 457px);
   padding: 0;
   margin: 0;
   border: none;
-
-  background-color: @palette-background;
   background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  @media @retina {
-    background-image: url("../img/map-mobile@2x.jpg");
-    background-size: 320px auto;
-  }
-
   @media @tablet-widths {
     background-image: url("../img/map-tablet@1x.jpg");
-    @media @retina {
-      background-image: url("../img/map-tablet@2x.jpg");
-      background-size: 768px auto;
-    }
   }
-
   @media @desktop-widths {
     position: absolute;
     top: -404px;
     right: 50px;
-
     .size(525px, 457px);
-
     background-image: url("../img/map-desktop@1x.jpg");
-    @media @retina {
-      background-image: url("../img/map-desktop@2x.jpg");
-      background-size: 525px auto;
-    }
   }
-
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 67px;
+    height: 100px;
+    margin-top: calc( -100px/2);
+    margin-left: calc( -67px/2);
+  }
   iframe {
     border: 0;
-    width: 100%;
-    height: 100%;
+    .size(100%, 457px);
+  }
+}
+
+@media @mobile-widths and (min-resolution: 144dpi), @mobile-widths and (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
+@media @tablet-widths and (min-resolution: 144dpi), @tablet-widths and (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-tablet@2x.jpg");
+    background-size: 768px auto;
+  }
+}
+
+@media @desktop-widths and (min-resolution: 144dpi), @desktop-widths and (min-resolution: 1.5dppx) {
+  .contacts__map {
+    background-image: url("../img/map-desktop@2x.jpg");
+    background-size: 525px auto;
   }
 }
 
@@ -183,4 +171,22 @@
     margin-left: 0;
     margin-top: 41px;
   }
+}
+
+//Заливка фона в свг
+
+#flag-triangle {
+  fill: @palette-primary;
+}
+
+#flag-rect {
+  fill: #000;
+}
+
+#pin-outer {
+  fill: #fff;
+}
+
+#pin-inner {
+  fill: @palette-primary;
 }
