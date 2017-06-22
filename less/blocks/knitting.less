@@ -170,35 +170,6 @@
       }
     }
   }
-  &--phone,
-  &--email {
-    li {
-      position: relative;
-      &:hover svg,
-      &:focus svg,
-      &:active svg {
-        fill: @palette-primary;
-      }
-    }
-    svg {
-      position: absolute;
-      fill: fade(#000, 20%);
-    }
-  }
-  &--phone {
-    svg {
-      .size(25px, 25px);
-      top: 10px;
-      right: 10px;
-      @media @tablet-widths {
-        top: 13px;
-        right: 25px;
-      }
-      @media @desktop-widths {
-        right: 8px;
-      }
-    }
-  }
   &--email {
     svg {
       .size(32px, 32px);
@@ -480,14 +451,45 @@
   }
 }
 
-.knitting__input {
-  &--email,
-  &--phone {
-    &:hover ~ svg,
-    &:focus ~ svg,
-    &:active ~ svg  {
-      fill: @palette-primary;
-    }
+.knitting__input--phone {
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 25px 25px;
+  background-position: 97% 40%;
+  @media @tablet-widths {
+    background-position: 95% 40%;
+  }
+  @media @desktop-widths {
+    background-position: 99% 40%;
+  }
+}
+
+.knitting__input--email {
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 98% 60%;
+  @media @tablet-widths {
+    background-position: 96% 60%;
+  }
+  @media @desktop-widths {
+    background-position: 99.5% 60%;
+  }
+}
+
+.knitting__input--phone {
+  &:hover,
+  &:focus,
+  &:active {
+    background-image: url("../img/icon-phone--green.svg");
+  }
+}
+
+.knitting__input--email {
+  &:hover,
+  &:focus,
+  &:active {
+    background-image: url("../img/icon-mail--green.svg");
   }
 }
 
