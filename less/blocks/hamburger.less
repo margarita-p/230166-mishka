@@ -3,51 +3,23 @@
   overflow: hidden;
 }
 
-.hamburger__close,
-.hamburger__open {
-  position: relative;
+.hamburger__close, .hamburger__open {
   display: block;
+  .size(22px, 22px);
   background-color: transparent;
+  background-repeat: no-repeat;
   box-shadow: none;
   border: none;
   cursor: pointer;
-  &::after,
-  &::before {
-    position: absolute;
-    right: 0;
-    .size(22px, 2px);
-    background-color: #000;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
-  }
 }
 
 .hamburger__open {
-  top: 6px;
-  .size(22px, 2px);
-  background-color: #000;
-  &::before {
-    top: -6px;
-    animation-name: animation-rotate_1-2;
-  }
-  &::after {
-    top: 6px;
-    animation-name: animation-rotate_2-2;
-  }
+  background-image: url("../img/icon-menu-open.svg");
 }
 
 .hamburger__close {
   display: none;
-  .size(22px, 22px);
-  &::before {
-    top: 2px;
-    right: 0;
-    animation-name: animation-rotate_1-1;
-  }
-  &::after {
-    top: 16px;
-    animation-name: animation-rotate_2-1;
-  }
+  background-image: url("../img/icon-menu-close.svg");
 }
 
 .hamburger__show {
@@ -56,40 +28,4 @@
 
 .hamburger__hide {
   display: none;
-}
-
-@keyframes animation-rotate_1-1 {
-  from {
-    transform: translateY(0) rotate(0) scaleX(1);
-  }
-  to {
-    transform: translateY(7px) rotate(45deg) scaleX(1.2);
-  }
-}
-
-@keyframes animation-rotate_2-1 {
-  from {
-    transform: translateY(0) rotate(0) scaleX(1);
-  }
-  to {
-    transform: translateY(-7px) rotate(-45deg) scaleX(1.2);
-  }
-}
-
-@keyframes animation-rotate_1-2 {
-  from {
-    transform: translateY(7px) rotate(45deg) scaleX(1.2);
-  }
-  to {
-    transform: translateY(0) rotate(0) scaleX(1);
-  }
-}
-
-@keyframes animation-rotate_2-2 {
-  from {
-    transform: translateY(-7px) rotate(-45deg) scaleX(1.2);
-  }
-  to {
-    transform: translateY(0) rotate(0) scaleX(1);
-  }
 }
