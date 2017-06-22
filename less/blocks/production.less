@@ -82,7 +82,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: @palette-background;
-  @media @retina {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/video-mobile@2x.jpg");
     background-size: 259px auto;
   }
@@ -91,7 +91,7 @@
     top: -456px;
     .size(670px, 455px);
     background-image: url("../img/video-tablet@1x.jpg");
-    @media @retina {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/video-tablet@2x.jpg");
       background-size: 670px auto;
     }
@@ -101,8 +101,7 @@
     top: 0;
     left: -682px;
     background-image: url("../img/video-desktop@1x.jpg");
-    background-size: 682px auto;
-    @media @retina {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/video-desktop@2x.jpg");
       background-size: 682px auto;
     }
@@ -137,7 +136,8 @@
     line-height: 30px;
   }
   p {
-    margin: 0 0 18px;
+    margin: 0;
+    margin-bottom: 18px;
   }
 }
 
