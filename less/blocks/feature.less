@@ -2,10 +2,10 @@
   .wrapper-left();
   margin-bottom: 55px;
   @media @tablet-widths {
-    margin-bottom: 131px;
+    margin-bottom: 105px;
   }
   @media @desktop-widths {
-    margin-bottom: 131px;
+    margin-bottom: 105px;
   }
 }
 
@@ -15,7 +15,7 @@
   line-height: 30px;
   .font-title-media();
   @media @tablet-widths {
-    margin-bottom: 30px;
+    margin-bottom: 45px;
   }
 }
 
@@ -26,27 +26,11 @@
 }
 
 .feature__list {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 28px;
   padding: 0;
   list-style: none;
-  @media @tablet-widths {
-    &--right {
-      width: 290px;
-      margin-right: 45px;
-    }
-    &--left {
-      width: 335px;
-    }
-  }
-  @media @desktop-widths {
-    &--right {
-      width: 305px;
-      margin-right: 45px;
-    }
-    &--left {
-      width: 350px;
-    }
-  }
 }
 
 .feature__item {
@@ -62,46 +46,85 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+  @media @tablet-widths {
+    width: 290px;
+    margin-right: 45px;
+    margin-bottom: 55px;
+    padding-top: 56px;
+    font-size: 20px;
+    line-height: 22px;
+    &:last-of-type {
+      margin-bottom: 55px;
+    }
+  }
+  @media @desktop-widths {
+    width: 305px;
+    margin-right: 45px;
+  }
   svg {
     position: absolute;
     top: 0;
     left: 0;
     fill: @palette-primary;
   }
-  &--eco svg {
-    top: 0;
-    left: 8px;
-    .size(33px, 38px);
+  &--eco {
+    @media @tablet-widths {
+      order: 1;
+    }
+    svg {
+      top: 0;
+      left: 8px;
+      .size(33px, 38px);
+    }
   }
-  &--style svg {
-    top: 2px;
-    left: 0;
-    .size(47px, 27px);
+  &--money {
+    @media @tablet-widths {
+      order: 3;
+    }
+    svg {
+      top: 2px;
+      left: 0;
+      .size(47px, 27px);
+    }
   }
-  &--heart svg {
-    top: 7px;
-    left: 8px;
-    .size(34px, 27px);
+  &--heart {
+    @media @tablet-widths {
+      order: 5;
+    }
+    svg {
+      top: 7px;
+      left: 8px;
+      .size(34px, 27px);
+    }
   }
-  &--roll svg {
-    top: 4px;
-    left: 4px;
-    .size(35px, 34px);
+  &--roll {
+    @media @tablet-widths {
+      order: 2;
+    }
+    svg {
+      top: 4px;
+      left: 4px;
+      .size(35px, 34px);
+    }
   }
-  &--support svg {
-    top: 5px;
-    left: -6px;
-    .size(55px, 23px);
+  &--support {
+    @media @tablet-widths {
+      order: 4;
+    }
+    svg {
+      top: 5px;
+      left: -6px;
+      .size(55px, 23px);
+    }
   }
-  &--gift svg {
-    top: 3px;
-    left: 3px;
-    .size(33px, 32px);
-  }
-  @media @tablet-widths {
-    margin-bottom: 55px;
-    padding-top: 56px;
-    font-size: 20px;
-    line-height: 22px;
+  &--gift {
+    @media @tablet-widths {
+      order: 6;
+    }
+    svg {
+      top: 3px;
+      left: 3px;
+      .size(33px, 32px);
+    }
   }
 }

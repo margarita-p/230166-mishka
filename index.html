@@ -31,7 +31,7 @@
   <header class="page-header">
     <div class="page-header__wrapper">
 
-<!-- PAGE-HEADER logo -->
+<!-- PAGE-HEADER logo & hamburger -->
 
       <div class="page-header__inner">
         <h1 class="page-header__logo page-header__logo--static">
@@ -42,13 +42,7 @@
             <img src="img/logo-mobile.svg" alt="Магазин «Мишка»">
           </picture>
         </h1>
-
-<!-- PAGE-HEADER hamburger -->
-
-        <div class="hamburger page-header__hamburger">
-          <button type="button" class="hamburger__open"><span class="visually-hidden">Развернуть</span></button>
-          <button type="button" class="hamburger__close"><span class="visually-hidden">Свернуть</span></button>
-        </div>
+        <button type="button" class="hamburger hamburger--no-js page-header__hamburger"></button>
       </div>
 
 <!-- MAIN-NAV -->
@@ -150,36 +144,32 @@
 
     <section class="feature">
       <h2 class="feature__title">Коротко о нас:</h2>
-      <div class="feature__content">
-        <ul class="feature__list feature__list--right">
-          <li class="feature__item feature__item--eco">
-            <svg width="33" height="38"><use xlink:href="#icon-feature-1"></use></svg>
-            <span>Экологически<br> чистые материалы</span>
-          </li>
-          <li class="feature__item feature__item--money">
-            <svg width="47" height="27"><use xlink:href="#icon-feature-3"></use></svg>
-            <span>Скандинавский стиль<br> по российской цене</span>
-          </li>
-          <li class="feature__item feature__item--heart">
-            <svg width="34" height="27"><use xlink:href="#icon-feature-5"></use></svg>
-            <span>Увеличивает лайки<br> на фотографиях</span>
-          </li>
-        </ul>
-        <ul class="feature__list feature__list--left">
-          <li class="feature__item feature__item--roll">
-            <svg width="34" height="35"><use xlink:href="#icon-feature-2"></use></svg>
-            <span>Связано вручную с<br> любовью и умилением</span>
-          </li>
-          <li class="feature__item feature__item--support">
-            <svg width="55" height="23"><use xlink:href="#icon-feature-4"></use></svg>
-            <span>Поддержка&nbsp;отечественного производителя</span>
-          </li>
-          <li class="feature__item feature__item--gift">
-            <svg width="33" height="32"><use xlink:href="#icon-feature-6"></use></svg>
-            <span>Поставляется в<br> подарочной упаковке</span>
-          </li>
-        </ul>
-      </div>
+      <ul class="feature__list feature__list--right">
+        <li class="feature__item feature__item--eco">
+          <svg width="33" height="38"><use xlink:href="#icon-feature-1"></use></svg>
+          <span>Экологически<br> чистые материалы</span>
+        </li>
+        <li class="feature__item feature__item--money">
+          <svg width="47" height="27"><use xlink:href="#icon-feature-3"></use></svg>
+          <span>Скандинавский стиль<br> по российской цене</span>
+        </li>
+        <li class="feature__item feature__item--heart">
+          <svg width="34" height="27"><use xlink:href="#icon-feature-5"></use></svg>
+          <span>Увеличивает лайки<br> на фотографиях</span>
+        </li>
+        <li class="feature__item feature__item--roll">
+          <svg width="34" height="35"><use xlink:href="#icon-feature-2"></use></svg>
+          <span>Связано вручную с<br> любовью и умилением</span>
+        </li>
+        <li class="feature__item feature__item--support">
+          <svg width="55" height="23"><use xlink:href="#icon-feature-4"></use></svg>
+          <span>Поддержка&nbsp;отечественного производителя</span>
+        </li>
+        <li class="feature__item feature__item--gift">
+          <svg width="33" height="32"><use xlink:href="#icon-feature-6"></use></svg>
+          <span>Поставляется в<br> подарочной упаковке</span>
+        </li>
+      </ul>
     </section>
 
 <!-- REVIEWS -->

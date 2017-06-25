@@ -1,35 +1,17 @@
 .hamburger {
-  .size(22px, 22px);
-  overflow: hidden;
-}
-
-.hamburger__close, .hamburger__open {
   display: block;
   .size(22px, 22px);
+  background-image: url("../img/icon-menu-open.svg");
   background-color: transparent;
   background-repeat: no-repeat;
+  background-position: center;
   box-shadow: none;
   border: none;
   cursor: pointer;
-  &:active {
-    outline: none;
+  &--close {
+    background-image: url("../img/icon-menu-close.svg");
   }
-}
-
-.hamburger__open {
-  background-image: url("../img/icon-menu-open.svg");
-  background-position: center;
-}
-
-.hamburger__close {
-  display: none;
-  background-image: url("../img/icon-menu-close.svg");
-}
-
-.hamburger__show {
-  display: block;
-}
-
-.hamburger__hide {
-  display: none;
+  &--no-js {
+    display: none;
+  }
 }
