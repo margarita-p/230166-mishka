@@ -1,6 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Маргарита  Попова](https://up.htmlacademy.ru/adaptive/11/user/230166).
+* Студент: [Маргарита  Попова](https://htmlacademy.ru/profile/id230166).
 * Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/id86119).
 
 ---
